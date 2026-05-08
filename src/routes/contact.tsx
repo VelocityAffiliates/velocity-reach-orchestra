@@ -17,75 +17,75 @@ function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <div>
-      <section className="surface-dark relative">
-        <Nav variant="dark" />
-        <div className="container-x pt-40 pb-20 md:pt-52 md:pb-28">
-          <span className="eyebrow">Contact</span>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl text-surface-foreground max-w-4xl leading-[1.05]">
-            Let's design your outbound execution layer.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-surface-foreground/75">
-            Tell us about your portfolio, your sales motion, and what's currently going untouched.
-            We'll come back with a clear path to launch within two weeks.
-          </p>
-        </div>
+      <Nav />
+      <section className="container-x pt-40 pb-16 md:pt-56 md:pb-20">
+        <span className="eyebrow">Contact</span>
+        <h1 className="mt-8 font-display text-5xl md:text-7xl max-w-4xl leading-[1.05]">
+          Let's design your outbound execution layer.
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          Tell us about your portfolio, your sales motion, and what's currently going untouched.
+          We'll come back with a clear path to launch within two weeks.
+        </p>
       </section>
 
-      <section className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12">
-        <div className="md:col-span-5 space-y-10">
-          <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-foreground/50">Email</div>
-            <a href="mailto:brooke@velocityaffiliates.com" className="mt-2 block font-display text-2xl hover:text-accent">brooke@velocityaffiliates.com</a>
-          </div>
-          <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-foreground/50">Offices</div>
-            <div className="mt-2 font-display text-2xl">Vancouver · Victoria · Kelowna</div>
-          </div>
-          <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-foreground/50">Markets</div>
-            <div className="mt-2 font-display text-2xl">Canada &nbsp;|&nbsp; United States</div>
-          </div>
-          <div className="rule" />
-          <p className="text-foreground/70">
-            Prefer a direct intro? Send a note with your portfolio size, current CRM, and the
-            campaign you'd like to launch first.
-          </p>
-        </div>
-
-        <form
-          className="md:col-span-7 rounded-2xl border border-border bg-card p-8 md:p-10 space-y-5"
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSent(true);
-          }}
-        >
-          {sent ? (
-            <div className="py-16 text-center">
-              <div className="font-display text-3xl">Thank you.</div>
-              <p className="mt-3 text-foreground/70">We'll be in touch within one business day.</p>
+      <section className="border-t border-border">
+        <div className="container-x py-20 md:py-28 grid md:grid-cols-12 gap-16">
+          <div className="md:col-span-4 space-y-10">
+            <div>
+              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Email</div>
+              <a href="mailto:brooke@velocityaffiliates.com" className="mt-3 block font-display text-xl">brooke@velocityaffiliates.com</a>
             </div>
-          ) : (
-            <>
-              <div className="grid md:grid-cols-2 gap-5">
-                <Field label="Name" name="name" required />
-                <Field label="Company" name="company" required />
-                <Field label="Email" name="email" type="email" required />
-                <Field label="Phone" name="phone" />
+            <div>
+              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Offices</div>
+              <div className="mt-3 font-display text-xl">Vancouver · Victoria · Kelowna</div>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Markets</div>
+              <div className="mt-3 font-display text-xl">Canada &nbsp;·&nbsp; United States</div>
+            </div>
+          </div>
+
+          <form
+            className="md:col-span-8 space-y-6"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setSent(true);
+            }}
+          >
+            {sent ? (
+              <div className="py-20 text-center border border-border rounded-xl">
+                <div className="font-display text-3xl">Thank you.</div>
+                <p className="mt-3 text-muted-foreground">We'll be in touch within one business day.</p>
               </div>
-              <Field label="Role" name="role" placeholder="VP Sales, Marketing Director, Owner…" />
-              <div>
-                <label className="text-xs uppercase tracking-[0.18em] text-foreground/50">What do you want Velocity to run?</label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  required
-                  className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 outline-none focus:border-accent transition-colors"
-                />
-              </div>
-              <button type="submit" className="btn-accent">Send Inquiry →</button>
-            </>
-          )}
-        </form>
+            ) : (
+              <>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <Field label="Name" name="name" required />
+                  <Field label="Company" name="company" required />
+                  <Field label="Email" name="email" type="email" required />
+                  <Field label="Phone" name="phone" />
+                </div>
+                <Field label="Role" name="role" placeholder="VP Sales, Marketing Director, Owner…" />
+                <div>
+                  <label htmlFor="message" className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                    What do you want Velocity to run?
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    className="mt-3 w-full border-b border-border bg-transparent py-3 outline-none focus:border-foreground transition-colors resize-none"
+                  />
+                </div>
+                <div className="pt-4">
+                  <button type="submit" className="btn-primary">Send inquiry</button>
+                </div>
+              </>
+            )}
+          </form>
+        </div>
       </section>
       <Footer />
     </div>
@@ -95,14 +95,16 @@ function Contact() {
 function Field({ label, name, type = "text", required, placeholder }: { label: string; name: string; type?: string; required?: boolean; placeholder?: string }) {
   return (
     <div>
-      <label htmlFor={name} className="text-xs uppercase tracking-[0.18em] text-foreground/50">{label}{required && <span className="text-accent"> *</span>}</label>
+      <label htmlFor={name} className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+        {label}{required && " *"}
+      </label>
       <input
         id={name}
         name={name}
         type={type}
         required={required}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 outline-none focus:border-accent transition-colors"
+        className="mt-3 w-full border-b border-border bg-transparent py-3 outline-none focus:border-foreground transition-colors placeholder:text-muted-foreground/60"
       />
     </div>
   );

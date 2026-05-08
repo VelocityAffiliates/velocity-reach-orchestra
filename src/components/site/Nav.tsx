@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 
 const links = [
   { to: "/", label: "Home" },
@@ -8,30 +9,40 @@ const links = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export function Nav({ variant = "light" }: { variant?: "light" | "dark" }) {
-  const text = variant === "dark" ? "text-surface-foreground" : "text-foreground";
+export function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className={`absolute top-0 inset-x-0 z-30 ${text}`}>
-      <div className="container-x flex items-center justify-between py-6">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl tracking-tight">
-          <span className="inline-block h-2 w-2 rounded-full bg-accent" />
-          Velocity<span className="opacity-60">Affiliates</span>
+    <header
+      className={`fixed top-0 inset-x-0 z-30 transition-all duration-300 ${
+        scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"
+      }`}
+    >
+      <div className="container-x flex items-center justify-between h-16">
+        <Link to="/" className="font-display text-lg tracking-tight">
+          Velocity<span className="text-muted-foreground"> Affiliates</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-8 text-sm">
+        <nav className="hidden md:flex items-center gap-9 text-sm">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              activeProps={{ className: "text-accent" }}
-              className="hover:text-accent transition-colors"
+              activeProps={{ className: "text-foreground" }}
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
             </Link>
           ))}
         </nav>
-        <Link to="/contact" className="hidden md:inline-flex btn-accent !py-2 !px-4 text-sm">
-          Book a Strategy Call
+        <Link to="/contact" className="hidden md:inline-flex btn-primary !py-2 !px-4 text-xs">
+          Book a call
         </Link>
       </div>
     </header>
