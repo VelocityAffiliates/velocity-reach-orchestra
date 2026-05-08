@@ -42,49 +42,45 @@ const groups = [
 function Services() {
   return (
     <div>
-      <section className="surface-dark relative">
-        <Nav variant="dark" />
-        <div className="container-x pt-40 pb-24 md:pt-52 md:pb-32">
-          <span className="eyebrow">Services</span>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl text-surface-foreground max-w-4xl leading-[1.05]">
-            Outbound systems, run with operational rigor.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-surface-foreground/75">
-            We design and operate the outbound execution layer your sales team doesn't have the
-            bandwidth to build internally — fully integrated into your CRM, your calendar, and
-            your reporting.
-          </p>
-        </div>
+      <Nav />
+      <section className="container-x pt-40 pb-20 md:pt-56 md:pb-28">
+        <span className="eyebrow">Services</span>
+        <h1 className="mt-8 font-display text-5xl md:text-7xl max-w-4xl leading-[1.05]">
+          Outbound systems, run with operational rigor.
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          We design and operate the outbound execution layer your sales team doesn't have the
+          bandwidth to build internally — fully integrated into your CRM, your calendar, and your
+          reporting.
+        </p>
       </section>
 
-      <section className="container-x py-24 md:py-32 space-y-24">
+      <section className="border-t border-border">
         {groups.map((g) => (
-          <div key={g.title} className="grid md:grid-cols-12 gap-10">
-            <div className="md:col-span-4">
-              <span className="eyebrow !text-foreground/50">{g.title}</span>
-              <div className="mt-6 h-px w-16 bg-accent" />
-            </div>
-            <div className="md:col-span-8 space-y-px bg-border rounded-2xl overflow-hidden border border-border">
-              {g.items.map(([t, d]) => (
-                <div key={t} className="bg-card p-8 hover:bg-secondary transition-colors">
-                  <h3 className="text-2xl">{t}</h3>
-                  <p className="mt-3 text-foreground/70">{d}</p>
-                </div>
-              ))}
+          <div key={g.title} className="border-b border-border">
+            <div className="container-x py-20 md:py-24 grid md:grid-cols-12 gap-12">
+              <div className="md:col-span-4">
+                <span className="eyebrow">{g.title}</span>
+              </div>
+              <div className="md:col-span-8 grid-lines">
+                {g.items.map(([t, d]) => (
+                  <div key={t} className="py-8 first:pt-0">
+                    <h3 className="text-2xl md:text-3xl">{t}</h3>
+                    <p className="mt-3 text-muted-foreground leading-relaxed max-w-2xl">{d}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))}
       </section>
 
-      <section className="container-x pb-32">
-        <div className="rounded-3xl surface-dark p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div>
-            <span className="eyebrow">Engagement</span>
-            <h2 className="mt-4 text-3xl md:text-4xl text-surface-foreground max-w-xl">
-              Built for portfolios. Launched in two weeks.
-            </h2>
-          </div>
-          <Link to="/contact" className="btn-accent">Start a Conversation →</Link>
+      <section className="container-x py-24 md:py-32">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <h2 className="text-3xl md:text-5xl max-w-2xl">
+            Built for portfolios. Launched in two weeks.
+          </h2>
+          <Link to="/contact" className="btn-primary">Start a conversation</Link>
         </div>
       </section>
       <Footer />

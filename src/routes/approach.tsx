@@ -7,7 +7,7 @@ export const Route = createFileRoute("/approach")({
   head: () => ({
     meta: [
       { title: "Approach — Velocity Affiliates" },
-      { name: "description", content: "How Velocity operates as an embedded outbound execution partner: align, execute, deliver. Built for builders, developers, and sales organizations." },
+      { name: "description", content: "How Velocity operates as an embedded outbound execution partner: align, execute, deliver." },
     ],
   }),
 });
@@ -15,69 +15,74 @@ export const Route = createFileRoute("/approach")({
 function Approach() {
   return (
     <div>
-      <section className="surface-dark relative">
-        <Nav variant="dark" />
-        <div className="container-x pt-40 pb-24 md:pt-52 md:pb-32 max-w-5xl">
-          <span className="eyebrow">Our Approach</span>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl text-surface-foreground leading-[1.05]">
-            Operational rigor, applied to outbound.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-surface-foreground/75">
-            We don't replace your sales team — we feed it. Our team works as a structured layer
-            inside your operation, with clear role boundaries and consistent execution.
-          </p>
-        </div>
+      <Nav />
+      <section className="container-x pt-40 pb-20 md:pt-56 md:pb-28 max-w-5xl">
+        <span className="eyebrow">Our Approach</span>
+        <h1 className="mt-8 font-display text-5xl md:text-7xl leading-[1.05]">
+          Operational rigor, applied to outbound.
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          We don't replace your sales team — we feed it. Our team works as a structured layer
+          inside your operation, with clear role boundaries and consistent execution.
+        </p>
       </section>
 
-      <section className="container-x py-24 md:py-32">
-        <div className="grid md:grid-cols-3 gap-10">
+      <section className="border-t border-border">
+        <div className="container-x py-20 md:py-24 grid md:grid-cols-3 gap-px bg-border hairline rounded-xl overflow-hidden">
           {[
             { n: "01", t: "Align", d: "Community onboarding, script development, CRM mapping, ownership boundaries, and campaign planning across your portfolio." },
             { n: "02", t: "Execute", d: "Daily live human calling with urgency-driven messaging. Cadences, dispositions, and tagging are managed inside your CRM, not ours." },
             { n: "03", t: "Deliver", d: "Booked appointments, real-time conversation themes, and weekly consolidated reporting that gives leadership visibility into pipeline health." },
           ].map((s) => (
-            <div key={s.n} className="border-t border-foreground/15 pt-8">
-              <div className="font-display text-accent text-3xl">{s.n}</div>
+            <div key={s.n} className="bg-background p-10">
+              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">{s.n}</div>
               <h3 className="mt-4 text-3xl">{s.t}</h3>
-              <p className="mt-3 text-foreground/70">{s.d}</p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">{s.d}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="container-x pb-24 md:pb-32">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div className="rounded-2xl border border-border p-10 bg-card">
-            <span className="eyebrow !text-foreground/50">Built For</span>
-            <ul className="mt-6 space-y-3 text-lg">
-              <li>Homebuilders & master-planned developers</li>
-              <li>Multi-community sales organizations</li>
-              <li>New-home & pre-sale teams</li>
-              <li>Marketing leaders inheriting decaying databases</li>
-              <li>VPs of Sales who need execution, not theory</li>
+      <section className="surface-subtle border-y border-border">
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-2 gap-16">
+          <div>
+            <span className="eyebrow">Built For</span>
+            <ul className="mt-8 grid-lines text-lg">
+              {[
+                "Homebuilders & master-planned developers",
+                "Multi-community sales organizations",
+                "New-home & pre-sale teams",
+                "Marketing leaders inheriting decaying databases",
+                "VPs of Sales who need execution, not theory",
+              ].map((x) => <li key={x} className="py-4">{x}</li>)}
             </ul>
           </div>
-          <div className="rounded-2xl surface-dark p-10">
+          <div>
             <span className="eyebrow">Operating Principles</span>
-            <ul className="mt-6 space-y-4 text-surface-foreground/85">
-              <li><strong className="text-surface-foreground">Human callers, never bots.</strong> Every conversation is live and accountable.</li>
-              <li><strong className="text-surface-foreground">Inside your systems.</strong> CRM-logged activity and reporting your team can audit.</li>
-              <li><strong className="text-surface-foreground">Clear role boundaries.</strong> No brokerage activity, no transactional crossover.</li>
-              <li><strong className="text-surface-foreground">Portfolio-ready.</strong> Outreach scaled across multiple communities and markets.</li>
-              <li><strong className="text-surface-foreground">Visible momentum.</strong> Weekly reporting, engagement themes, and pipeline signals.</li>
+            <ul className="mt-8 grid-lines">
+              {[
+                ["Human callers, never bots.", "Every conversation is live and accountable."],
+                ["Inside your systems.", "CRM-logged activity and reporting your team can audit."],
+                ["Clear role boundaries.", "No brokerage activity, no transactional crossover."],
+                ["Portfolio-ready.", "Outreach scaled across multiple communities and markets."],
+                ["Visible momentum.", "Weekly reporting, engagement themes, and pipeline signals."],
+              ].map(([t, d]) => (
+                <li key={t} className="py-4">
+                  <span className="font-medium">{t}</span>{" "}
+                  <span className="text-muted-foreground">{d}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </section>
 
-      <section className="container-x pb-32">
-        <div className="rounded-3xl border border-border p-10 md:p-16 text-center">
-          <span className="eyebrow">Get Started</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl max-w-3xl mx-auto">
-            See what disciplined outbound looks like inside your operation.
-          </h2>
-          <Link to="/contact" className="btn-primary mt-8">Book a Strategy Call →</Link>
-        </div>
+      <section className="container-x py-24 md:py-32 text-center max-w-3xl mx-auto">
+        <span className="eyebrow">Get Started</span>
+        <h2 className="mt-6 font-display text-4xl md:text-5xl">
+          See what disciplined outbound looks like inside your operation.
+        </h2>
+        <Link to="/contact" className="btn-primary mt-10">Book a strategy call</Link>
       </section>
       <Footer />
     </div>
