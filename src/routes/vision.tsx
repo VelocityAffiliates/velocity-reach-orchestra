@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Counter } from "@/components/site/Counter";
+import { OrbitMark, SystemDiagram, GridPattern } from "@/components/site/Graphics";
 
 export const Route = createFileRoute("/vision")({
   component: VisionPage,
