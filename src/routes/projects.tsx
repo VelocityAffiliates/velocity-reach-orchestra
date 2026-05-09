@@ -67,6 +67,18 @@ function ProjectsPage() {
         </p>
       </section>
 
+      <section className="border-y border-border surface-subtle">
+        <div className="container-x py-20 md:py-24 grid md:grid-cols-12 gap-10 items-end">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Portfolio Pace</span>
+            <h2 className="mt-6 text-3xl md:text-4xl">Sales motion across active engagements.</h2>
+          </div>
+          <div className="md:col-span-8">
+            <StackedBars className="w-full h-auto text-ink" />
+          </div>
+        </div>
+      </section>
+
       <section className="border-t border-border">
         <div className="container-x">
           {projects.map((p, i) => (
