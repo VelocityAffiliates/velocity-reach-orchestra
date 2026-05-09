@@ -172,6 +172,116 @@ export function StackedBars({ className = "" }: { className?: string }) {
   );
 }
 
+export function GapDiagram({ className = "" }: { className?: string }) {
+  const stops = [
+    { label: "MARKETING", x: 60 },
+    { label: "CRM", x: 180 },
+    { label: "SALES TEAM", x: 300 },
+    { label: "FOLLOW-UP", x: 420 },
+    { label: "MOMENTUM", x: 540 },
+  ];
+  return (
+    <svg viewBox="0 0 600 280" className={className} fill="none" stroke="currentColor" aria-hidden>
+      <rect x="0.5" y="0.5" width="599" height="279" strokeOpacity="0.12" />
+      {/* Top track — broken */}
+      <text x="20" y="40" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
+        WITHOUT VELOCITY
+      </text>
+      <line x1="60" y1="80" x2="360" y2="80" strokeOpacity="0.5" />
+      <line x1="380" y1="80" x2="540" y2="80" strokeOpacity="0.15" strokeDasharray="3 4" />
+      {stops.map((s, i) => (
+        <g key={s.label}>
+          <circle cx={s.x} cy="80" r={i < 3 ? 6 : 4} fill={i < 3 ? "currentColor" : "none"} strokeOpacity={i < 3 ? 1 : 0.4} />
+          <text x={s.x} y="62" textAnchor="middle" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none" opacity={i < 3 ? 0.9 : 0.4}>
+            {s.label}
+          </text>
+        </g>
+      ))}
+      <text x="430" y="105" fontSize="8" letterSpacing="2" fill="currentColor" stroke="none" opacity="0.5">
+        ↓ momentum decays here
+      </text>
+
+      {/* Bottom track — Velocity bridges */}
+      <text x="20" y="180" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
+        WITH VELOCITY
+      </text>
+      <line x1="60" y1="220" x2="540" y2="220" strokeOpacity="0.6" />
+      {stops.map((s) => (
+        <g key={s.label}>
+          <circle cx={s.x} cy="220" r="6" fill="currentColor" stroke="none" />
+          <text x={s.x} y="248" textAnchor="middle" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none">
+            {s.label}
+          </text>
+        </g>
+      ))}
+      {/* Velocity bridge */}
+      <rect x="240" y="200" width="180" height="40" strokeOpacity="0.85" />
+      <text x="330" y="225" textAnchor="middle" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none">
+        VELOCITY EXECUTION LAYER
+      </text>
+      <text x="20" y="270" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.5">
+        FIG. 05 — THE FOLLOW-THROUGH GAP
+      </text>
+    </svg>
+  );
+}
+
+export function DashboardTile({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 600 360" className={className} fill="none" stroke="currentColor" aria-hidden>
+      <rect x="0.5" y="0.5" width="599" height="359" strokeOpacity="0.15" />
+      {/* Top row — KPI cells */}
+      {[
+        { x: 20, label: "CALLS / WK", v: "3,124" },
+        { x: 165, label: "CONVOS", v: "612" },
+        { x: 310, label: "BOOKED", v: "184" },
+        { x: 455, label: "ATTEND %", v: "92" },
+      ].map((k) => (
+        <g key={k.label}>
+          <rect x={k.x} y="20" width="125" height="78" strokeOpacity="0.25" />
+          <text x={k.x + 12} y="44" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none" opacity="0.6">
+            {k.label}
+          </text>
+          <text x={k.x + 12} y="82" fontSize="26" fontFamily="Playfair Display, serif" fill="currentColor" stroke="none">
+            {k.v}
+          </text>
+        </g>
+      ))}
+      {/* Chart area */}
+      <rect x="20" y="120" width="395" height="220" strokeOpacity="0.2" />
+      <line x1="20" y1="300" x2="415" y2="300" strokeOpacity="0.3" />
+      <polyline
+        points="40,280 80,250 120,260 160,220 200,200 240,210 280,170 320,160 360,140 400,130"
+        strokeOpacity="0.85"
+      />
+      {[280, 250, 260, 220, 200, 210, 170, 160, 140, 130].map((y, i) => (
+        <circle key={i} cx={40 + i * 40} cy={y} r="3" fill="currentColor" stroke="none" />
+      ))}
+      {/* Side panel */}
+      <rect x="430" y="120" width="150" height="220" strokeOpacity="0.2" />
+      <text x="442" y="142" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none" opacity="0.6">
+        ENGAGEMENT MIX
+      </text>
+      {[
+        { y: 168, w: 130, label: "Brokers" },
+        { y: 200, w: 96, label: "Database" },
+        { y: 232, w: 78, label: "Events" },
+        { y: 264, w: 56, label: "Re-engage" },
+      ].map((b) => (
+        <g key={b.label}>
+          <rect x="442" y={b.y} width={b.w} height="6" fill="currentColor" stroke="none" opacity="0.85" />
+          <text x="442" y={b.y - 4} fontSize="8" letterSpacing="2" fill="currentColor" stroke="none" opacity="0.7">
+            {b.label}
+          </text>
+        </g>
+      ))}
+      <text x="20" y="354" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
+        FIG. 06 — LEADERSHIP DASHBOARD
+      </text>
+    </svg>
+  );
+}
+
 export function VerticalRule({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 40 400" className={className} fill="none" stroke="currentColor" aria-hidden>
