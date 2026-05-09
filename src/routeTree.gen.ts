@@ -11,10 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisionRouteImport } from './routes/vision'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ResultsRouteImport } from './routes/results'
+import { Route as ReportingRouteImport } from './routes/reporting'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MarketsRouteImport } from './routes/markets'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AppointmentRouteImport } from './routes/appointment'
 import { Route as AboutRouteImport } from './routes/about'
@@ -28,6 +31,16 @@ const VisionRoute = VisionRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResultsRoute = ResultsRouteImport.update({
+  id: '/results',
+  path: '/results',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportingRoute = ReportingRouteImport.update({
+  id: '/reporting',
+  path: '/reporting',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsRoute = ProjectsRouteImport.update({
@@ -48,6 +61,11 @@ const InsightsRoute = InsightsRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApproachRoute = ApproachRouteImport.update({
@@ -76,10 +94,13 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/appointment': typeof AppointmentRoute
   '/approach': typeof ApproachRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/markets': typeof MarketsRoute
   '/projects': typeof ProjectsRoute
+  '/reporting': typeof ReportingRoute
+  '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
   '/vision': typeof VisionRoute
 }
@@ -88,10 +109,13 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/appointment': typeof AppointmentRoute
   '/approach': typeof ApproachRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/markets': typeof MarketsRoute
   '/projects': typeof ProjectsRoute
+  '/reporting': typeof ReportingRoute
+  '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
   '/vision': typeof VisionRoute
 }
@@ -101,10 +125,13 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/appointment': typeof AppointmentRoute
   '/approach': typeof ApproachRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/markets': typeof MarketsRoute
   '/projects': typeof ProjectsRoute
+  '/reporting': typeof ReportingRoute
+  '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
   '/vision': typeof VisionRoute
 }
@@ -115,10 +142,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/appointment'
     | '/approach'
+    | '/blog'
     | '/contact'
     | '/insights'
     | '/markets'
     | '/projects'
+    | '/reporting'
+    | '/results'
     | '/services'
     | '/vision'
   fileRoutesByTo: FileRoutesByTo
@@ -127,10 +157,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/appointment'
     | '/approach'
+    | '/blog'
     | '/contact'
     | '/insights'
     | '/markets'
     | '/projects'
+    | '/reporting'
+    | '/results'
     | '/services'
     | '/vision'
   id:
@@ -139,10 +172,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/appointment'
     | '/approach'
+    | '/blog'
     | '/contact'
     | '/insights'
     | '/markets'
     | '/projects'
+    | '/reporting'
+    | '/results'
     | '/services'
     | '/vision'
   fileRoutesById: FileRoutesById
@@ -152,10 +188,13 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AppointmentRoute: typeof AppointmentRoute
   ApproachRoute: typeof ApproachRoute
+  BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
   InsightsRoute: typeof InsightsRoute
   MarketsRoute: typeof MarketsRoute
   ProjectsRoute: typeof ProjectsRoute
+  ReportingRoute: typeof ReportingRoute
+  ResultsRoute: typeof ResultsRoute
   ServicesRoute: typeof ServicesRoute
   VisionRoute: typeof VisionRoute
 }
@@ -174,6 +213,20 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/results': {
+      id: '/results'
+      path: '/results'
+      fullPath: '/results'
+      preLoaderRoute: typeof ResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reporting': {
+      id: '/reporting'
+      path: '/reporting'
+      fullPath: '/reporting'
+      preLoaderRoute: typeof ReportingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -202,6 +255,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/approach': {
@@ -240,10 +300,13 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AppointmentRoute: AppointmentRoute,
   ApproachRoute: ApproachRoute,
+  BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
   InsightsRoute: InsightsRoute,
   MarketsRoute: MarketsRoute,
   ProjectsRoute: ProjectsRoute,
+  ReportingRoute: ReportingRoute,
+  ResultsRoute: ResultsRoute,
   ServicesRoute: ServicesRoute,
   VisionRoute: VisionRoute,
 }

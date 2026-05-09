@@ -1,40 +1,92 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { CadenceDiagram, SystemDiagram } from "@/components/site/Graphics";
 
 export const Route = createFileRoute("/services")({
   component: Services,
   head: () => ({
     meta: [
       { title: "Services — Velocity Affiliates" },
-      { name: "description", content: "Outbound calling, event RSVP campaigns, database reactivation, appointment coordination, CRM execution, and reporting — built as infrastructure." },
+      { name: "description", content: "Realtor outreach, database reactivation, event acceleration, appointment coordination, leadership alignment, and sales enablement — built as outbound infrastructure for homebuilders." },
+      { property: "og:title", content: "Services — Velocity Affiliates" },
+      { property: "og:description", content: "Structured outbound infrastructure for homebuilders." },
     ],
   }),
 });
 
 const groups = [
   {
-    title: "Outreach Execution",
+    n: "01",
+    title: "Realtor Outreach",
+    sub: "Broker activation, run as a discipline.",
     items: [
-      ["High-Volume Outbound Calling", "Structured daily call volume across multiple databases, with cadences designed for engagement, not noise."],
-      ["Realtor & Broker Outreach", "Broker activation campaigns that re-engage agents, communicate inventory, and surface real opportunities."],
-      ["Prospect Re-Engagement", "Live human conversations across nurture and aged leads to qualify intent and create urgency."],
+      ["Broker database activation", "Live, structured outreach across your active and aspirational broker network."],
+      ["One-to-one conversations", "Real human dialogue — not bulk email blasts or automated drips."],
+      ["Appointment generation", "Booked previews, project tours, and broker-led buyer introductions."],
+      ["Geographic targeting", "Outreach calibrated to community catchments and feeder markets."],
+      ["Urgency-driven messaging", "Inventory updates, incentive windows, and release timing."],
     ],
   },
   {
-    title: "Appointment & Event Engine",
+    n: "02",
+    title: "Database Reactivation",
+    sub: "Recover the pipeline you've already paid for.",
     items: [
-      ["Event RSVP Campaigns", "Pre-event invites, confirmations, reminder cadences, and post-event follow-through built into the call workflow."],
-      ["Appointment Coordination", "Booked, confirmed, and CRM-logged appointments delivered for clean sales handoff."],
-      ["Follow-Up Systems", "Multi-touch sequences that hold prospects accountable to next steps — without leaning on the sales team."],
+      ["Dormant lead recovery", "Systematic re-engagement of aged registrants and stalled prospects."],
+      ["Nurture recovery", "Re-establish the conversation where automation went silent."],
+      ["Pipeline momentum", "Surface real buying signals already sitting inside your CRM."],
+      ["Re-engagement cadences", "Multi-touch outreach across call, text, and follow-up."],
+      ["Lead prioritization", "Tagging and disposition that reflect actual readiness, not lead age."],
     ],
   },
   {
-    title: "Sales Operations Support",
+    n: "03",
+    title: "Event Acceleration",
+    sub: "RSVPs become attendance. Attendance becomes appointments.",
     items: [
-      ["CRM Organization & Execution", "Hygiene, tagging, pipeline structure, and daily activity logging so your data reflects reality."],
-      ["Reporting & Feedback Loops", "Weekly consolidated reporting and on-the-ground feedback themes from real conversations."],
-      ["Team Accountability & Communication", "Cadences, check-ins, and structured communication that keep outbound momentum visible across leadership."],
+      ["RSVP outreach", "Personal invitation calls in addition to email and SMS."],
+      ["Confirmations", "Pre-event confirmation cadence to reduce no-shows."],
+      ["Reminders", "Day-of and week-of reminders sequenced for attendance lift."],
+      ["Attendance tracking", "Live confirmation status and attendance reporting."],
+      ["No-show recovery", "Same-week outreach to re-engage missed registrants."],
+      ["Post-event appointments", "Booked previews from event traffic before the momentum fades."],
+    ],
+  },
+  {
+    n: "04",
+    title: "Appointment Coordination",
+    sub: "Protect the moment between interest and walk-in.",
+    items: [
+      ["Appointment scheduling", "Booked directly to the right calendar inside your sales operation."],
+      ["Confirmations", "Multi-touch confirmation to maximize show rates."],
+      ["CRM visibility", "Every appointment logged with disposition, source, and notes."],
+      ["Seamless sales handoff", "Briefed, ready prospects delivered to your onsite team."],
+      ["Reduced no-shows", "Confirmation cadence designed around builder show-rate realities."],
+    ],
+  },
+  {
+    n: "05",
+    title: "Leadership & Alignment Support",
+    sub: "Visibility across marketing, sales, and ownership.",
+    items: [
+      ["Leadership visibility", "Weekly executive reporting on outbound activity and pipeline movement."],
+      ["Workflow alignment", "Shared cadence with marketing, sales, and project leadership."],
+      ["Sales / marketing coordination", "A shared operating rhythm between two functions that often drift."],
+      ["Operational accountability", "Clear owners, clear cadences, clear reporting."],
+      ["Event planning cadence", "Pre-event, event, and post-event coordination across stakeholders."],
+    ],
+  },
+  {
+    n: "06",
+    title: "Sales Enablement",
+    sub: "Equip the floor to close what we deliver.",
+    items: [
+      ["Scripts & messaging", "Builder-specific scripting tested in live conversations."],
+      ["Outbound cadence design", "Touch sequences engineered around buyer and broker behavior."],
+      ["Follow-up systems", "Structured handoff and follow-through frameworks."],
+      ["Role clarity", "Clean boundaries between Velocity, OSC, and onsite sales."],
+      ["Accountability frameworks", "Visible standards across every community in the portfolio."],
     ],
   },
 ];
@@ -43,32 +95,43 @@ function Services() {
   return (
     <div>
       <Nav />
-      <section className="container-x pt-40 pb-20 md:pt-56 md:pb-28">
+      <section className="container-x pt-44 md:pt-56 pb-20">
         <span className="eyebrow">Services</span>
-        <h1 className="mt-8 font-display text-5xl md:text-7xl max-w-4xl leading-[1.05]">
-          Outbound systems, run with operational rigor.
+        <h1 className="mt-8 display-xl text-5xl md:text-7xl max-w-5xl">
+          Structured outbound infrastructure
+          <em className="italic font-normal"> for homebuilders.</em>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          We design and operate the outbound execution layer your sales team doesn't have the
-          bandwidth to build internally — fully integrated into your CRM, your calendar, and your
-          reporting.
+        <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          Six interlocking disciplines, run as a single operating motion across
+          your portfolio — fully integrated into your CRM, your calendar, and
+          your reporting.
         </p>
       </section>
 
-      <section className="border-t border-border">
+      <section className="border-y border-border surface-subtle">
+        <div className="container-x py-20 md:py-24">
+          <SystemDiagram className="w-full max-w-4xl mx-auto h-auto text-ink" />
+        </div>
+      </section>
+
+      <section className="border-b border-border">
         {groups.map((g) => (
-          <div key={g.title} className="border-b border-border">
-            <div className="container-x py-20 md:py-24 grid md:grid-cols-12 gap-12">
+          <div key={g.n} className="border-b border-border last:border-b-0">
+            <div className="container-x py-20 md:py-28 grid md:grid-cols-12 gap-12">
               <div className="md:col-span-4">
-                <span className="eyebrow">{g.title}</span>
+                <div className="font-display text-muted-foreground text-xl">{g.n}</div>
+                <h2 className="mt-8 text-3xl md:text-4xl">{g.title}</h2>
+                <p className="mt-5 text-muted-foreground leading-relaxed">{g.sub}</p>
               </div>
-              <div className="md:col-span-8 grid-lines">
-                {g.items.map(([t, d]) => (
-                  <div key={t} className="py-8 first:pt-0">
-                    <h3 className="text-2xl md:text-3xl">{t}</h3>
-                    <p className="mt-3 text-muted-foreground leading-relaxed max-w-2xl">{d}</p>
-                  </div>
-                ))}
+              <div className="md:col-span-8">
+                <ul className="grid sm:grid-cols-2 gap-px bg-border hairline">
+                  {g.items.map(([t, d]) => (
+                    <li key={t} className="bg-background p-7">
+                      <h3 className="text-lg">{t}</h3>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{d}</p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -76,11 +139,21 @@ function Services() {
       </section>
 
       <section className="container-x py-24 md:py-32">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="max-w-2xl">
+          <span className="eyebrow">Cadence</span>
+          <h2 className="mt-6 text-3xl md:text-4xl">Designed touch by touch.</h2>
+        </div>
+        <div className="mt-14">
+          <CadenceDiagram className="w-full h-auto text-ink" />
+        </div>
+      </section>
+
+      <section className="border-t border-border">
+        <div className="container-x py-24 md:py-32 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <h2 className="text-3xl md:text-5xl max-w-2xl">
             Built for portfolios. Launched in two weeks.
           </h2>
-          <Link to="/contact" className="btn-primary">Start a conversation</Link>
+          <Link to="/appointment" className="btn-primary">Start a Conversation</Link>
         </div>
       </section>
       <Footer />

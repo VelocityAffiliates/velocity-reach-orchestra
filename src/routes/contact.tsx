@@ -21,7 +21,7 @@ function Contact() {
       <section className="container-x pt-40 pb-16 md:pt-56 md:pb-20">
         <span className="eyebrow">Contact</span>
         <h1 className="mt-8 font-display text-5xl md:text-7xl max-w-4xl leading-[1.05]">
-          Let's design your outbound execution layer.
+          Let's discuss your communities, database, and sales goals.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
           Tell us about your portfolio, your sales motion, and what's currently going untouched.
