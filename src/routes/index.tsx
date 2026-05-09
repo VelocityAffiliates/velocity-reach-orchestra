@@ -343,6 +343,3 @@ function Home() {
   );
 }
 
-// keep referenced but unused imports satisfied
-void SystemDiagram;
-void Counter;
