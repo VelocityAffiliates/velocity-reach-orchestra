@@ -160,7 +160,70 @@ function Home() {
         </div>
       </section>
 
-      {/* BUILT FOR BUILDERS — metrics */}
+      {/* COMMUNITIES — imagery triptych */}
+      <section className="border-t border-border">
+        <div className="container-x py-24 md:py-32">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <span className="eyebrow">The Communities We Support</span>
+              <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
+                Inside the neighborhoods
+                <em className="italic font-normal"> builders are bringing to life.</em>
+              </h2>
+            </div>
+            <p className="max-w-sm text-sm text-muted-foreground leading-relaxed">
+              From master-planned communities to single-tower releases, our outbound
+              programs are built around the rhythm of real residential development.
+            </p>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-12 gap-6">
+            <figure className="md:col-span-7 relative overflow-hidden">
+              <img
+                src={neighborhoodAerial}
+                alt="Aerial view of a modern residential neighborhood at golden hour"
+                width={1600}
+                height={1024}
+                loading="lazy"
+                className="w-full h-[44vh] md:h-[60vh] object-cover"
+              />
+              <figcaption className="mt-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground flex justify-between">
+                <span>Fig. 01 — Master-Planned Community</span>
+                <span>Aerial / Golden Hour</span>
+              </figcaption>
+            </figure>
+            <figure className="md:col-span-5 relative overflow-hidden">
+              <img
+                src={homeDetail}
+                alt="Architectural detail of a modern home with wood cladding and an olive tree"
+                width={1080}
+                height={1500}
+                loading="lazy"
+                className="w-full h-[44vh] md:h-[60vh] object-cover"
+              />
+              <figcaption className="mt-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground flex justify-between">
+                <span>Fig. 02 — Single-Family Detail</span>
+                <span>Exterior</span>
+              </figcaption>
+            </figure>
+            <figure className="md:col-span-12 relative overflow-hidden mt-2">
+              <img
+                src={neighborhoodStreet}
+                alt="Quiet streetscape of modern townhomes with warm wood and white facades"
+                width={1600}
+                height={900}
+                loading="lazy"
+                className="w-full h-[40vh] md:h-[56vh] object-cover"
+              />
+              <figcaption className="mt-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground flex justify-between">
+                <span>Fig. 03 — Townhome Streetscape</span>
+                <span>Morning Light</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-border bg-ink text-white">
         <div className="container-x py-28 md:py-36">
           <div className="max-w-2xl">
