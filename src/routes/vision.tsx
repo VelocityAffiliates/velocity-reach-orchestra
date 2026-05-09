@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Counter } from "@/components/site/Counter";
+import { OrbitMark, SystemDiagram, GridPattern } from "@/components/site/Graphics";
 
 export const Route = createFileRoute("/vision")({
   component: VisionPage,
@@ -20,17 +21,37 @@ function VisionPage() {
     <div>
       <Nav />
 
-      <section className="container-x pt-44 md:pt-56 pb-24">
-        <span className="eyebrow">Our Vision</span>
-        <h1 className="mt-8 display-xl text-5xl md:text-7xl max-w-5xl">
-          Become the operational standard for outbound execution
-          <em className="italic font-normal"> in residential development.</em>
-        </h1>
-        <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Velocity exists to give builders, developers, and sales organizations the
-          one capability the industry consistently underbuilds: disciplined,
-          human-led follow-through at scale.
-        </p>
+      <section className="container-x pt-44 md:pt-56 pb-24 grid md:grid-cols-12 gap-12 items-center">
+        <div className="md:col-span-8">
+          <span className="eyebrow">Our Vision</span>
+          <h1 className="mt-8 display-xl text-5xl md:text-7xl">
+            Become the operational standard for outbound execution
+            <em className="italic font-normal"> in residential development.</em>
+          </h1>
+          <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+            Velocity exists to give builders, developers, and sales organizations the
+            one capability the industry consistently underbuilds: disciplined,
+            human-led follow-through at scale.
+          </p>
+        </div>
+        <div className="md:col-span-4 flex justify-center md:justify-end">
+          <OrbitMark className="w-64 h-64 text-ink" />
+        </div>
+      </section>
+
+      <section className="border-y border-border surface-subtle relative overflow-hidden">
+        <GridPattern className="absolute inset-0 w-full h-full text-ink" />
+        <div className="container-x py-24 md:py-32 relative">
+          <div className="max-w-2xl">
+            <span className="eyebrow">The Operating Model</span>
+            <h2 className="mt-6 text-3xl md:text-4xl">
+              Marketing, Velocity, Sales — operating as one motion.
+            </h2>
+          </div>
+          <div className="mt-14">
+            <SystemDiagram className="w-full h-auto text-ink" />
+          </div>
+        </div>
       </section>
 
       <section className="border-y border-border surface-subtle">

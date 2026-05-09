@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { MapPlot } from "@/components/site/Graphics";
 
 export const Route = createFileRoute("/markets")({
   component: MarketsPage,
@@ -73,6 +74,9 @@ function MarketsPage() {
             <h2 className="mt-6 text-4xl md:text-5xl">Active markets.</h2>
           </div>
           <Link to="/contact" className="link-arrow">Discuss your market →</Link>
+        </div>
+        <div className="border border-border p-6 md:p-10 mb-14">
+          <MapPlot className="w-full h-auto text-ink" />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border hairline">
           {regions.map((r) => (
