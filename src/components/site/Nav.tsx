@@ -2,12 +2,11 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const links = [
-  { to: "/projects", label: "Projects" },
   { to: "/services", label: "Services" },
-  { to: "/vision", label: "Vision" },
-  { to: "/markets", label: "Markets" },
-  { to: "/insights", label: "Insights" },
-  { to: "/appointment", label: "Book" },
+  { to: "/results", label: "Results" },
+  { to: "/reporting", label: "Reporting" },
+  { to: "/about", label: "About" },
+  { to: "/blog", label: "Insights" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -28,7 +27,6 @@ export function Nav() {
       }`}
     >
       <div className="container-x">
-        {/* Logo row */}
         <div className="flex items-center justify-between md:justify-center pt-6 pb-4 md:pt-7 md:pb-5 relative">
           <Link to="/" className="flex flex-col items-center leading-none">
             <span className="font-display text-2xl md:text-[28px] tracking-[0.02em]">
@@ -37,6 +35,12 @@ export function Nav() {
             <span className="mt-1 text-[10px] tracking-[0.42em] text-muted-foreground uppercase">
               Affiliates
             </span>
+          </Link>
+          <Link
+            to="/appointment"
+            className="hidden md:inline-flex absolute right-0 top-1/2 -translate-y-1/2 text-[11px] uppercase tracking-[0.22em] border border-ink px-4 py-2 hover:bg-ink hover:text-white transition-colors"
+          >
+            Book a Call
           </Link>
           <button
             aria-label="Menu"
@@ -48,34 +52,25 @@ export function Nav() {
             <span className="block w-5 h-px bg-ink" />
           </button>
         </div>
-        {/* Nav row */}
         <nav className="hidden md:flex items-center justify-center gap-8 lg:gap-10 border-t border-border py-4">
           {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              activeOptions={{ exact: false }}
-              className="nav-link"
-            >
+            <Link key={l.to} to={l.to} activeOptions={{ exact: false }} className="nav-link">
               {l.label}
             </Link>
           ))}
         </nav>
       </div>
-      {/* Mobile drawer */}
       {open && (
         <div className="md:hidden border-t border-border bg-background animate-fade-in">
           <nav className="container-x py-6 flex flex-col gap-4">
             {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                onClick={() => setOpen(false)}
-                className="nav-link"
-              >
+              <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="nav-link">
                 {l.label}
               </Link>
             ))}
+            <Link to="/appointment" onClick={() => setOpen(false)} className="btn-primary mt-4 justify-center">
+              Book a Call
+            </Link>
           </nav>
         </div>
       )}

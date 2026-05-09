@@ -12,8 +12,9 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-8 max-w-md text-sm text-muted-foreground leading-relaxed">
-            The outbound execution layer between marketing and sales. Structured human
-            outreach systems for homebuilders, developers, and sales organizations.
+            Outbound sales execution and momentum infrastructure for homebuilders and developers.
+            Realtor outreach, database reactivation, event acceleration, and appointment
+            coordination — run as a system.
           </p>
           <div className="mt-8 flex gap-3">
             {["LinkedIn", "Instagram", "X"].map((s) => (
@@ -30,13 +31,12 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h4 className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground mb-5">Explore</h4>
+          <h4 className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground mb-5">Platform</h4>
           <ul className="space-y-3 text-sm">
-            <li><Link to="/vision" className="hover:opacity-60 transition-opacity">Vision</Link></li>
             <li><Link to="/services" className="hover:opacity-60 transition-opacity">Services</Link></li>
-            <li><Link to="/markets" className="hover:opacity-60 transition-opacity">Markets</Link></li>
-            <li><Link to="/projects" className="hover:opacity-60 transition-opacity">Projects</Link></li>
-            <li><Link to="/insights" className="hover:opacity-60 transition-opacity">Insights</Link></li>
+            <li><Link to="/results" className="hover:opacity-60 transition-opacity">Results</Link></li>
+            <li><Link to="/reporting" className="hover:opacity-60 transition-opacity">Reporting</Link></li>
+            <li><Link to="/blog" className="hover:opacity-60 transition-opacity">Insights</Link></li>
           </ul>
         </div>
 
@@ -44,7 +44,7 @@ export function Footer() {
           <h4 className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground mb-5">Company</h4>
           <ul className="space-y-3 text-sm">
             <li><Link to="/about" className="hover:opacity-60 transition-opacity">About</Link></li>
-            <li><Link to="/approach" className="hover:opacity-60 transition-opacity">Approach</Link></li>
+            <li><Link to="/markets" className="hover:opacity-60 transition-opacity">Markets</Link></li>
             <li><Link to="/appointment" className="hover:opacity-60 transition-opacity">Book a Call</Link></li>
             <li><Link to="/contact" className="hover:opacity-60 transition-opacity">Contact</Link></li>
           </ul>
@@ -58,19 +58,15 @@ export function Footer() {
                 brooke@velocityaffiliates.com
               </a>
             </li>
-            <li className="text-muted-foreground">
-              Vancouver · Victoria · Kelowna
-            </li>
-            <li className="text-muted-foreground">
-              Canada &nbsp;·&nbsp; United States
-            </li>
+            <li className="text-muted-foreground">Vancouver · Victoria · Kelowna</li>
+            <li className="text-muted-foreground">Canada &nbsp;·&nbsp; United States</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="container-x py-6 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
           <span>© {new Date().getFullYear()} Velocity Affiliates</span>
-          <span>Outbound Growth Infrastructure</span>
+          <span>Outbound Execution · Sales Momentum Infrastructure</span>
         </div>
       </div>
     </footer>
