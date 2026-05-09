@@ -1,10 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
-import { Counter } from "@/components/site/Counter";
 import hero from "@/assets/hero.jpg";
 import {
-  SystemDiagram,
   CadenceDiagram,
   GridPattern,
   OrbitMark,
