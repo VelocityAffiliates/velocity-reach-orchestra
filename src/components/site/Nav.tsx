@@ -2,15 +2,18 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const links = [
-  { to: "/", label: "Home" },
+  { to: "/projects", label: "Projects" },
   { to: "/services", label: "Services" },
-  { to: "/approach", label: "Approach" },
-  { to: "/about", label: "About" },
+  { to: "/vision", label: "Vision" },
+  { to: "/markets", label: "Markets" },
+  { to: "/insights", label: "Insights" },
+  { to: "/appointment", label: "Book" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -21,30 +24,61 @@ export function Nav() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-30 transition-all duration-300 ${
-        scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"
+        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-background/0"
       }`}
     >
-      <div className="container-x flex items-center justify-between h-16">
-        <Link to="/" className="font-display text-lg tracking-tight">
-          Velocity<span className="text-muted-foreground"> Affiliates</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-9 text-sm">
+      <div className="container-x">
+        {/* Logo row */}
+        <div className="flex items-center justify-between md:justify-center pt-6 pb-4 md:pt-7 md:pb-5 relative">
+          <Link to="/" className="flex flex-col items-center leading-none">
+            <span className="font-display text-2xl md:text-[28px] tracking-[0.02em]">
+              Velocity
+            </span>
+            <span className="mt-1 text-[10px] tracking-[0.42em] text-muted-foreground uppercase">
+              Affiliates
+            </span>
+          </Link>
+          <button
+            aria-label="Menu"
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 p-2"
+          >
+            <span className="block w-5 h-px bg-ink mb-[5px]" />
+            <span className="block w-5 h-px bg-ink mb-[5px]" />
+            <span className="block w-5 h-px bg-ink" />
+          </button>
+        </div>
+        {/* Nav row */}
+        <nav className="hidden md:flex items-center justify-center gap-8 lg:gap-10 border-t border-border py-4">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              activeOptions={{ exact: l.to === "/" }}
-              activeProps={{ className: "text-foreground" }}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              activeOptions={{ exact: false }}
+              className="nav-link"
             >
               {l.label}
             </Link>
           ))}
         </nav>
-        <Link to="/contact" className="hidden md:inline-flex btn-primary !py-2 !px-4 text-xs">
-          Book a call
-        </Link>
       </div>
+      {/* Mobile drawer */}
+      {open && (
+        <div className="md:hidden border-t border-border bg-background animate-fade-in">
+          <nav className="container-x py-6 flex flex-col gap-4">
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className="nav-link"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
