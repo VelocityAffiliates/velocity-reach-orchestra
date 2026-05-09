@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
+import { StackedBars } from "@/components/site/Graphics";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/projects")({

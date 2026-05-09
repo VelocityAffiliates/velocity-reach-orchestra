@@ -75,6 +75,9 @@ function MarketsPage() {
           </div>
           <Link to="/contact" className="link-arrow">Discuss your market →</Link>
         </div>
+        <div className="border border-border p-6 md:p-10 mb-14">
+          <MapPlot className="w-full h-auto text-ink" />
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border hairline">
           {regions.map((r) => (
             <div key={r.city} className="bg-background p-10">
