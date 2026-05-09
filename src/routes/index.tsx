@@ -3,6 +3,7 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Counter } from "@/components/site/Counter";
 import hero from "@/assets/hero.jpg";
+import { SystemDiagram, CadenceDiagram, GridPattern, OrbitMark, StackedBars } from "@/components/site/Graphics";
 
 export const Route = createFileRoute("/")({
   component: Home,
