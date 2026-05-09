@@ -2,6 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import hero from "@/assets/hero.jpg";
+import neighborhoodAerial from "@/assets/neighborhood-aerial.jpg";
+import neighborhoodStreet from "@/assets/neighborhood-street.jpg";
+import homeDetail from "@/assets/home-detail.jpg";
+import communityPlan from "@/assets/community-plan.jpg";
 import {
   CadenceDiagram,
   GridPattern,
