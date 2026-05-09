@@ -78,14 +78,35 @@ function Home() {
         </div>
       </section>
 
+      {/* DIAGRAM — Execution Layer */}
+      <section className="border-y border-border surface-subtle relative overflow-hidden">
+        <GridPattern className="absolute inset-0 w-full h-full text-ink" />
+        <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12 relative">
+          <div className="md:col-span-4">
+            <span className="eyebrow">The Execution Layer</span>
+            <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
+              Between marketing<br />and the sales floor.
+            </h2>
+            <p className="mt-8 text-muted-foreground leading-relaxed">
+              We sit in the operational gap most organizations leave open —
+              translating leads, brokers, and registrants into booked appointments.
+            </p>
+          </div>
+          <div className="md:col-span-8">
+            <SystemDiagram className="w-full h-auto text-ink" />
+          </div>
+        </div>
+      </section>
+
       {/* PHILOSOPHY */}
-      <section className="border-y border-border surface-subtle">
+      <section className="border-b border-border">
         <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <span className="eyebrow">The Discipline</span>
             <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
               You already paid for the pipeline.
             </h2>
+            <OrbitMark className="mt-12 w-40 h-40 text-ink" />
           </div>
           <div className="md:col-span-7 space-y-5 text-lg text-muted-foreground leading-relaxed md:pt-2">
             <p>
@@ -151,10 +172,29 @@ function Home() {
               </div>
             ))}
           </div>
+          <div className="mt-20 max-w-4xl mx-auto">
+            <CadenceDiagram className="w-full h-auto text-ink" />
+          </div>
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
+      {/* THROUGHPUT */}
+      <section className="container-x py-28 md:py-36">
+        <div className="grid md:grid-cols-12 gap-10 items-end mb-14">
+          <div className="md:col-span-7">
+            <span className="eyebrow">Throughput</span>
+            <h2 className="mt-6 text-4xl md:text-5xl">
+              Output measured, weekly.
+            </h2>
+          </div>
+          <p className="md:col-span-5 text-muted-foreground leading-relaxed">
+            Every program ships consolidated reporting — call volume, conversations,
+            appointments booked, and feedback themes — built for sales leadership
+            review, not vanity dashboards.
+          </p>
+        </div>
+        <StackedBars className="w-full h-auto text-ink" />
+      </section>
       <section className="container-narrow py-28 md:py-36 text-center">
         <span className="eyebrow justify-center">Client</span>
         <blockquote className="mt-10 font-display text-3xl md:text-[40px] leading-[1.2] tracking-[-0.01em]">
