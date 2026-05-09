@@ -386,6 +386,28 @@ function Home() {
         </div>
       </section>
 
+      {/* COMMUNITY BAND */}
+      <section className="relative overflow-hidden border-t border-border">
+        <img
+          src={communityPlan}
+          alt="Master-planned community with parks and ponds at soft morning light"
+          width={1920}
+          height={1080}
+          loading="lazy"
+          className="w-full h-[60vh] md:h-[78vh] object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/10 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0">
+          <div className="container-x pb-12 md:pb-16 text-white">
+            <span className="eyebrow text-white/70">Portfolio Coverage</span>
+            <h2 className="mt-4 font-display text-3xl md:text-5xl max-w-2xl leading-[1.1]">
+              Operating across active builder communities
+              <em className="italic font-normal"> in Canada and the United States.</em>
+            </h2>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="border-t border-border bg-ink text-white">
         <div className="container-x py-28 md:py-36 text-center max-w-4xl mx-auto">
