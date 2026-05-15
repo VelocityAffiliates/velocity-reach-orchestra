@@ -7,7 +7,6 @@ import neighborhoodStreet from "@/assets/neighborhood-street.jpg";
 import homeDetail from "@/assets/home-detail.jpg";
 import communityPlan from "@/assets/community-plan.jpg";
 import {
-  CadenceDiagram,
   GridPattern,
   OrbitMark,
   StackedBars,
@@ -279,9 +278,6 @@ function Home() {
               <p className="mt-4 text-muted-foreground leading-relaxed">{step.d}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-20 max-w-4xl mx-auto">
-          <CadenceDiagram className="w-full h-auto text-ink" />
         </div>
       </section>
 
