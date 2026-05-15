@@ -239,7 +239,7 @@ export function DashboardTile({ className = "" }: { className?: string }) {
         { x: 20, label: "CALLS / WK", v: "3,124" },
         { x: 165, label: "CONVOS", v: "612" },
         { x: 310, label: "BOOKED", v: "184" },
-        { x: 455, label: "ATTEND %", v: "92" },
+        { x: 455, label: "ATTEND %", v: "60" },
       ].map((k) => (
         <g key={k.label}>
           <rect x={k.x} y="20" width="125" height="78" strokeOpacity="0.25" />
