@@ -23,7 +23,7 @@ const cases = [
     type: "Multi-Phase Release",
     metric: "120%",
     metricLabel: "of forecast",
-    body: "Dedicated outbound program across registered database and broker network ahead of Phase 2 release. Supported absorption pacing ahead of original release projections.",
+    body: "Dedicated outbound execution program supporting broker engagement, database reactivation, appointment coordination, and leadership visibility ahead of Phase 2 release. Activity, dispositions, and pipeline movement reported weekly to the project leadership team.",
   },
   {
     n: "02",
@@ -32,7 +32,7 @@ const cases = [
     type: "Pre-Sale Launch",
     metric: "1,800+",
     metricLabel: "broker touches",
-    body: "Pre-launch broker activation and database warm-up. Sustained appointment volume from launch weekend through three release events.",
+    body: "Pre-launch broker activation paired with structured database warm-up and CRM workflow alignment across the sales operation. Sustained appointment volume and consistent reporting cadence from launch weekend through three release events.",
   },
   {
     n: "03",
@@ -41,7 +41,7 @@ const cases = [
     type: "Standing Inventory",
     metric: "9 wks",
     metricLabel: "to sold out",
-    body: "Inventory acceleration program: structured re-engagement of aged registrants paired with broker incentive outreach. Supported accelerated inventory absorption ahead of construction completion.",
+    body: "Inventory acceleration program coordinating structured re-engagement of aged registrants, broker incentive outreach, and appointment routing into the onsite sales team. Operational rhythm maintained between marketing, sales, and ownership through weekly leadership reporting.",
   },
   {
     n: "04",
@@ -50,7 +50,7 @@ const cases = [
     type: "Event Engine",
     metric: "92%",
     metricLabel: "RSVP confirmation",
-    body: "Invitation, confirmation, and reminder cadence for two preview events. Delivered consistent attendance from out-of-market buyers.",
+    body: "End-to-end event coordination across two preview weekends, including invitation, confirmation, reminder, and post-event appointment cadences. Attendance and follow-through tracked inside the CRM and surfaced through leadership-level reporting.",
   },
 ];
 
@@ -135,6 +135,35 @@ function ResultsPage() {
             <Counter to={10000} suffix="+" label="Event RSVPs Coordinated" />
             <Counter to={3000} suffix="+" label="Appointments Coordinated" />
             <Counter to={98} suffix="%" label="CRM-Logged Activity" />
+          </div>
+        </div>
+      </section>
+
+      {/* OPERATIONAL INTEGRATION */}
+      <section className="border-t border-border surface-subtle">
+        <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Operational Integration</span>
+            <h2 className="mt-6 text-3xl md:text-4xl leading-tight">
+              Beyond outbound execution alone.
+            </h2>
+          </div>
+          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p className="text-foreground font-display text-2xl md:text-3xl leading-snug">
+              Velocity supports more than outbound execution alone.
+            </p>
+            <p>
+              Across active builder portfolios, our role often extends into
+              CRM workflow refinement, reporting visibility, appointment
+              coordination systems, sales and marketing alignment, and
+              operational support for leadership teams managing multiple
+              communities simultaneously.
+            </p>
+            <p>
+              The objective is to create clearer execution, stronger
+              visibility, and more consistent operational rhythm across
+              the portfolio.
+            </p>
           </div>
         </div>
       </section>
