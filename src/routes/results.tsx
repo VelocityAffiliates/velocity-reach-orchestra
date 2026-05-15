@@ -139,6 +139,35 @@ function ResultsPage() {
         </div>
       </section>
 
+      {/* OPERATIONAL INTEGRATION */}
+      <section className="border-t border-border surface-subtle">
+        <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Operational Integration</span>
+            <h2 className="mt-6 text-3xl md:text-4xl leading-tight">
+              Beyond outbound execution alone.
+            </h2>
+          </div>
+          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p className="text-foreground font-display text-2xl md:text-3xl leading-snug">
+              Velocity supports more than outbound execution alone.
+            </p>
+            <p>
+              Across active builder portfolios, our role often extends into
+              CRM workflow refinement, reporting visibility, appointment
+              coordination systems, sales and marketing alignment, and
+              operational support for leadership teams managing multiple
+              communities simultaneously.
+            </p>
+            <p>
+              The objective is to create clearer execution, stronger
+              visibility, and more consistent operational rhythm across
+              the portfolio.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32 flex flex-wrap items-end justify-between gap-6">
           <h2 className="text-4xl md:text-5xl max-w-2xl">
