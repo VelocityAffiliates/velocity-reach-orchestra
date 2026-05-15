@@ -108,8 +108,7 @@ function ResultsPage() {
             >
               <div className="md:col-span-4">
                 <div className="font-display text-muted-foreground text-xl">{p.n}</div>
-                <div className="mt-8 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{p.region}</div>
-                <div className="mt-2 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{p.type}</div>
+                <div className="mt-8 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{p.type}</div>
               </div>
               <div className="md:col-span-5">
                 <h2 className="text-3xl md:text-4xl">{p.t}</h2>
