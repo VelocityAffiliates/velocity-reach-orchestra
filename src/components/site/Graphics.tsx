@@ -202,23 +202,27 @@ export function GapDiagram({ className = "" }: { className?: string }) {
       </text>
 
       {/* Bottom track, Velocity bridges */}
-      <text x="20" y="180" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
+      <text x="20" y="155" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
         WITH VELOCITY
       </text>
-      <line x1="60" y1="220" x2="540" y2="220" strokeOpacity="0.6" />
+      {/* Velocity bridge, spans full track above the line */}
+      <rect x="60" y="175" width="480" height="28" strokeOpacity="0.85" />
+      <text x="300" y="193" textAnchor="middle" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none">
+        VELOCITY EXECUTION LAYER
+      </text>
+      {/* Bracket ticks down to each stop */}
+      {stops.map((s) => (
+        <line key={`tick-${s.label}`} x1={s.x} y1="203" x2={s.x} y2="220" strokeOpacity="0.4" />
+      ))}
+      <line x1="60" y1="230" x2="540" y2="230" strokeOpacity="0.6" />
       {stops.map((s) => (
         <g key={s.label}>
-          <circle cx={s.x} cy="220" r="6" fill="currentColor" stroke="none" />
-          <text x={s.x} y="248" textAnchor="middle" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none">
+          <circle cx={s.x} cy="230" r="6" fill="currentColor" stroke="none" />
+          <text x={s.x} y="256" textAnchor="middle" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none">
             {s.label}
           </text>
         </g>
       ))}
-      {/* Velocity bridge */}
-      <rect x="240" y="200" width="180" height="40" strokeOpacity="0.85" />
-      <text x="330" y="225" textAnchor="middle" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none">
-        VELOCITY EXECUTION LAYER
-      </text>
       <text x="20" y="270" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.5">
         FIG. 05, THE FOLLOW-THROUGH GAP
       </text>
