@@ -22,7 +22,7 @@ const groups = [
     sub: "Broker activation, run as a discipline.",
     items: [
       ["Broker database activation", "Live, structured outreach across your active and aspirational broker network."],
-      ["One-to-one conversations", "Real human dialogue — not bulk email blasts or automated drips."],
+      ["One-to-one conversations", "Real human dialogue, never bulk email blasts or automated drips."],
       ["Appointment generation", "Booked previews, project tours, and broker-led buyer introductions."],
       ["Geographic targeting", "Outreach calibrated to community catchments and feeder markets."],
       ["Urgency-driven messaging", "Inventory updates, incentive windows, and release timing."],
