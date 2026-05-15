@@ -58,8 +58,7 @@ export function Footer() {
                 brooke@velocityaffiliates.com
               </a>
             </li>
-            <li className="text-muted-foreground">Vancouver · Victoria · Kelowna</li>
-            <li className="text-muted-foreground">Canada &nbsp;·&nbsp; United States</li>
+            <li className="text-muted-foreground">Supporting builder portfolios across North America.</li>
           </ul>
         </div>
       </div>
