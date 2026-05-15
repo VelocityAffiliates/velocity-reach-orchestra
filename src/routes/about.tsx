@@ -132,7 +132,7 @@ function About() {
               We are not transactional salespeople.
             </p>
             <p className="font-display text-3xl md:text-5xl leading-[1.1] text-white">
-              We are operational infrastructure for builders who need measurable momentum.
+              We provide structured outbound execution for homebuilders and developers.
             </p>
           </div>
         </div>
