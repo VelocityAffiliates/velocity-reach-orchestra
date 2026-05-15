@@ -79,15 +79,15 @@ function About() {
         <div className="container-x py-24 md:py-32">
           <div className="max-w-2xl">
             <span className="eyebrow">Why Velocity Exists</span>
-            <h2 className="mt-6 text-4xl md:text-5xl">The quiet operational gap.</h2>
+            <h2 className="mt-6 text-4xl md:text-5xl">A quiet operational gap.</h2>
           </div>
           <div className="mt-14 grid md:grid-cols-3 gap-px bg-border hairline">
             {[
-              ["Dead databases", "CRMs full of leads nobody is consistently working."],
+              ["Dead databases", "CRMs full of leads no one is consistently working."],
               ["Overloaded sales teams", "Onsite teams correctly focused on contracts and walk-ins."],
               ["Disconnected marketing", "Marketing investment that never reaches a live conversation."],
               ["Weak nurture systems", "Pipelines that decay between launch events."],
-              ["Event follow-through gaps", "RSVPs that never become attendance — or appointments."],
+              ["Event coordination gaps", "RSVPs that never become attendance, or appointments."],
               ["Limited leadership visibility", "Activity assumed, not actually measured."],
             ].map(([t, d]) => (
               <div key={t} className="bg-background p-8">
@@ -97,7 +97,7 @@ function About() {
             ))}
           </div>
           <p className="mt-14 max-w-3xl text-xl md:text-2xl font-display leading-snug">
-            Velocity is operational infrastructure for builder sales momentum.
+            Velocity is structured outbound execution for homebuilders and developers.
           </p>
         </div>
       </section>
