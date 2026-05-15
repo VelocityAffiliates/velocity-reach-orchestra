@@ -39,9 +39,9 @@ function About() {
             <em className="italic font-normal"> the builder world.</em>
           </h1>
           <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Velocity Affiliates exists to give builders, developers, and sales
-            organizations the one capability the industry consistently underbuilds:
-            disciplined, human-led follow-through at scale.
+            Velocity Affiliates provides homebuilders and developers with one
+            capability the industry consistently underbuilds: disciplined,
+            human-led execution at scale.
           </p>
         </div>
         <div className="md:col-span-3 flex md:justify-end">
