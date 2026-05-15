@@ -402,7 +402,7 @@ function Home() {
             <span className="eyebrow text-white/70">Portfolio Coverage</span>
             <h2 className="mt-4 font-display text-3xl md:text-5xl max-w-2xl leading-[1.1]">
               Operating across active builder communities
-              <em className="italic font-normal"> in Canada and the United States.</em>
+              <em className="italic font-normal"> across North America.</em>
             </h2>
           </div>
         </div>
