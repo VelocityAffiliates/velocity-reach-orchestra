@@ -5,7 +5,7 @@ import hero from "@/assets/hero.jpg";
 import neighborhoodAerial from "@/assets/neighborhood-aerial.jpg";
 import neighborhoodStreet from "@/assets/neighborhood-street.jpg";
 import homeDetail from "@/assets/home-detail.jpg";
-import communityPlan from "@/assets/community-plan.jpg";
+import portfolioCoverageGraphic from "@/assets/portfolio-coverage-graphic.jpg";
 import {
   GridPattern,
   OrbitMark,
@@ -385,17 +385,17 @@ function Home() {
       {/* COMMUNITY BAND */}
       <section className="relative overflow-hidden border-t border-border">
         <img
-          src={communityPlan}
-          alt="Master-planned community with parks and ponds at soft morning light"
+          src={portfolioCoverageGraphic}
+          alt="Light architectural site plan graphic showing portfolio-level community coverage"
           width={1920}
           height={1080}
           loading="lazy"
-          className="w-full h-[60vh] md:h-[78vh] object-cover brightness-150 saturate-[0.9]"
+          className="w-full h-[60vh] md:h-[78vh] object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/55 to-ink/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/65 to-background/10" />
         <div className="absolute inset-x-0 bottom-0">
-          <div className="container-x pb-12 md:pb-16 text-white">
-            <span className="eyebrow text-white/70">Portfolio Coverage</span>
+          <div className="container-x pb-12 md:pb-16 text-foreground">
+            <span className="eyebrow text-muted-foreground">Portfolio Coverage</span>
             <h2 className="mt-4 font-display text-3xl md:text-5xl max-w-2xl leading-[1.1]">
               Operating across active builder communities
               <em className="italic font-normal"> across North America.</em>
