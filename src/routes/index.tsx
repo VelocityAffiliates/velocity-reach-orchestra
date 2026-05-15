@@ -242,7 +242,7 @@ function Home() {
               <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Calls / Week Capacity</div>
             </div>
             <div>
-              <div className="font-display text-5xl md:text-6xl tabular-nums">CA · US</div>
+              <div className="font-display text-5xl md:text-6xl tabular-nums">N. America</div>
               <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Builder Coverage</div>
             </div>
             <div>
