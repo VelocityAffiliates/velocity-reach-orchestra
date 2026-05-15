@@ -168,6 +168,38 @@ function About() {
         </div>
       </section>
 
+      {/* OPERATIONAL ADVISORY */}
+      <section className="border-y border-border surface-subtle">
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Operational Advisory</span>
+            <h2 className="mt-6 text-3xl md:text-4xl">Embedded operational partnership.</h2>
+          </div>
+          <div className="md:col-span-8">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              Velocity supports builder leadership teams with the operational
+              infrastructure that sits behind sustained sales momentum,
+              integrated directly into the way your organization already runs.
+            </p>
+            <ul className="mt-12 grid sm:grid-cols-2 gap-px bg-border hairline">
+              {[
+                ["Operational alignment", "Shared cadence across marketing, sales, and project leadership."],
+                ["Outbound workflow refinement", "Tightened sequences, ownership, and follow-through across the portfolio."],
+                ["Reporting structure", "Leadership reporting framed around pipeline movement and execution clarity."],
+                ["CRM process visibility", "Workflow, disposition, and stage usage made consistent across communities."],
+                ["Sales enablement strategy", "Scripts, cadences, and accountability frameworks designed for builder sales floors."],
+                ["Event coordination systems", "Pre-event, event, and post-event workflows operating as a single motion."],
+              ].map(([t, d]) => (
+                <li key={t} className="bg-background p-7">
+                  <h3 className="text-lg">{t}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{d}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="container-x pb-24 md:pb-32">
         <div className="flex flex-col md:flex-row justify-between gap-6 items-start md:items-center border-t border-border pt-16">

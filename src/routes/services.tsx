@@ -89,6 +89,21 @@ const groups = [
       ["Accountability frameworks", "Visible standards across every community in the portfolio."],
     ],
   },
+  {
+    n: "07",
+    title: "CRM & Operational Enablement",
+    sub: "Operational systems designed for homebuilders and developers.",
+    items: [
+      ["CRM workflow alignment", "Configured cadences, dispositions, and stages that mirror how your sales operation actually runs."],
+      ["Lead routing & segmentation", "Structured routing logic and segmentation that protect speed-to-lead and project-level accountability."],
+      ["Sales & marketing visibility", "Shared operating view across marketing investment, outbound activity, and sales outcomes."],
+      ["Appointment tracking systems", "Booked, confirmed, attended, and outcome states tracked end-to-end inside the CRM."],
+      ["Follow-up accountability", "Cadence ownership and follow-through standards visible across teams and communities."],
+      ["Event workflow coordination", "Pre-event, event-day, and post-event workflows aligned across marketing, sales, and Velocity."],
+      ["Team adoption support", "Embedded operating cadence that drives consistent CRM usage across your sales floor."],
+      ["Reporting & operational clarity", "Leadership reporting structured around pipeline movement, not vanity activity."],
+    ],
+  },
 ];
 
 function Services() {
@@ -102,7 +117,7 @@ function Services() {
           <em className="italic font-normal"> for homebuilders and developers.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Six interlocking disciplines operating as a single execution system
+          Seven interlocking disciplines operating as a single execution system
           across your portfolio. Fully integrated into your CRM, calendars,
           reporting, and sales workflow.
         </p>
@@ -122,6 +137,13 @@ function Services() {
                 <div className="font-display text-muted-foreground text-xl">{g.n}</div>
                 <h2 className="mt-8 text-3xl md:text-4xl">{g.title}</h2>
                 <p className="mt-5 text-muted-foreground leading-relaxed">{g.sub}</p>
+                {g.n === "07" && (
+                  <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
+                    Velocity works alongside builder leadership teams to improve
+                    operational clarity, CRM usage, reporting visibility, and
+                    sales coordination across active portfolios.
+                  </p>
+                )}
               </div>
               <div className="md:col-span-8">
                 <ul className="grid sm:grid-cols-2 gap-px bg-border hairline">
