@@ -138,20 +138,10 @@ function Services() {
         ))}
       </section>
 
-      <section className="container-x py-24 md:py-32">
-        <div className="max-w-2xl">
-          <span className="eyebrow">Cadence</span>
-          <h2 className="mt-6 text-3xl md:text-4xl">Designed touch by touch.</h2>
-        </div>
-        <div className="mt-14">
-          <CadenceDiagram className="w-full h-auto text-ink" />
-        </div>
-      </section>
-
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <h2 className="text-3xl md:text-5xl max-w-2xl">
-            Built for portfolios. Launched in two weeks.
+            A single execution system across your portfolio.
           </h2>
           <Link to="/appointment" className="btn-primary">Start a Conversation</Link>
         </div>
