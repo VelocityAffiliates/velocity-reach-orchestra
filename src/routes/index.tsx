@@ -7,7 +7,6 @@ import neighborhoodStreet from "@/assets/neighborhood-street.jpg";
 import homeDetail from "@/assets/home-detail.jpg";
 import communityPlan from "@/assets/community-plan.jpg";
 import {
-  CadenceDiagram,
   GridPattern,
   OrbitMark,
   StackedBars,
