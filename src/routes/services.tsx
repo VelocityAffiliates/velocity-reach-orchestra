@@ -137,6 +137,13 @@ function Services() {
                 <div className="font-display text-muted-foreground text-xl">{g.n}</div>
                 <h2 className="mt-8 text-3xl md:text-4xl">{g.title}</h2>
                 <p className="mt-5 text-muted-foreground leading-relaxed">{g.sub}</p>
+                {g.n === "07" && (
+                  <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
+                    Velocity works alongside builder leadership teams to improve
+                    operational clarity, CRM usage, reporting visibility, and
+                    sales coordination across active portfolios.
+                  </p>
+                )}
               </div>
               <div className="md:col-span-8">
                 <ul className="grid sm:grid-cols-2 gap-px bg-border hairline">
