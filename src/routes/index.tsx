@@ -390,9 +390,9 @@ function Home() {
           width={1920}
           height={1080}
           loading="lazy"
-          className="w-full h-[60vh] md:h-[78vh] object-cover"
+          className="w-full h-[60vh] md:h-[78vh] object-cover brightness-125 saturate-[0.95]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-ink/10" />
         <div className="absolute inset-x-0 bottom-0">
           <div className="container-x pb-12 md:pb-16 text-white">
             <span className="eyebrow text-white/70">Portfolio Coverage</span>
