@@ -7,9 +7,9 @@ export const Route = createFileRoute("/results")({
   component: ResultsPage,
   head: () => ({
     meta: [
-      { title: "Execution — Velocity Affiliates" },
+      { title: "Execution, Velocity Affiliates" },
       { name: "description", content: "Structured outreach, appointment coordination, and operational support across active builder and developer portfolios." },
-      { property: "og:title", content: "Execution — Velocity Affiliates" },
+      { property: "og:title", content: "Execution, Velocity Affiliates" },
       { property: "og:description", content: "Consistent execution across active portfolios." },
     ],
   }),

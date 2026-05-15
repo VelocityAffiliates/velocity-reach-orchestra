@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
-      { title: "About — Velocity Affiliates" },
+      { title: "About, Velocity Affiliates" },
       { name: "description", content: "Built from inside the builder world. Velocity Affiliates is the outbound execution and momentum infrastructure company for homebuilders and developers." },
-      { property: "og:title", content: "About — Velocity Affiliates" },
+      { property: "og:title", content: "About, Velocity Affiliates" },
       { property: "og:description", content: "Operational infrastructure for builder sales momentum, founded by Brooke Scott." },
     ],
   }),
@@ -18,12 +18,12 @@ export const Route = createFileRoute("/about")({
 const differences = [
   { t: "Massive outbound volume", d: "Thousands of live conversations every week, sustained across portfolios." },
   { t: "Human-first outreach", d: "Every call is conducted by a real person trained in builder sales psychology." },
-  { t: "Live appointment coordination", d: "Confirmed, CRM-logged, ready for sales handoff — never a thrown lead." },
+  { t: "Live appointment coordination", d: "Confirmed, CRM-logged, ready for sales handoff, never a thrown lead." },
   { t: "Event acceleration systems", d: "Invitation, confirmation, reminder, and recovery cadences run as a single motion." },
   { t: "Builder specialization", d: "We work exclusively with homebuilders, developers, and their sales partners." },
   { t: "Leadership-level reporting", d: "Weekly visibility your VPs and ownership group can actually act on." },
   { t: "Execution speed", d: "Programs typically launch within two weeks of alignment." },
-  { t: "Operational visibility", d: "Reporting that reflects the work — not the marketing of the work." },
+  { t: "Operational visibility", d: "Reporting that reflects the work, not the marketing of the work." },
 ];
 
 function About() {
@@ -158,7 +158,7 @@ function About() {
               "Marketing alignment and shared cadence",
               "Sales enablement and accountability frameworks",
               "Operational rhythm with weekly visibility",
-              "Embedded — never outsourced",
+              "Embedded, never outsourced",
             ].map((x) => (
               <li key={x} className="border-b border-border pb-3">
                 {x}

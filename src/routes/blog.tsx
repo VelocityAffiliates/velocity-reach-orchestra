@@ -6,9 +6,9 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
   head: () => ({
     meta: [
-      { title: "Insights — Velocity Affiliates" },
+      { title: "Insights, Velocity Affiliates" },
       { name: "description", content: "Operational intelligence for builders: sales strategy, realtor engagement, event execution, CRM follow-up, and market intelligence." },
-      { property: "og:title", content: "Insights — Velocity Affiliates" },
+      { property: "og:title", content: "Insights, Velocity Affiliates" },
       { property: "og:description", content: "Thought leadership for homebuilder sales and marketing leaders." },
     ],
   }),
@@ -18,15 +18,15 @@ const featured = {
   cat: "Builder Sales Strategy",
   date: "May 2026",
   t: "Builders Don't Need More Leads. They Need More Follow-Through.",
-  d: "Why the next decade of builder sales performance will be defined by outbound discipline — not lead volume. A look at the operational gap quietly costing builders absorption.",
+  d: "Why the next decade of builder sales performance will be defined by outbound discipline, not lead volume. A look at the operational gap quietly costing builders absorption.",
 };
 
 const posts = [
   { cat: "CRM & Follow-Up", date: "May 2026", t: "Why Builder Databases Quietly Die", d: "The economics of database decay and the cadence required to recover it." },
   { cat: "Sales Enablement", date: "Apr 2026", t: "The Hidden Cost of Weak Follow-Up", d: "What every untouched lead in your CRM actually costs across a release cycle." },
-  { cat: "Market Intelligence", date: "Apr 2026", t: "What Live Buyer Conversations Reveal About the Market", d: "Patterns we're hearing across pricing, financing, and timing — in real time." },
+  { cat: "Market Intelligence", date: "Apr 2026", t: "What Live Buyer Conversations Reveal About the Market", d: "Patterns we're hearing across pricing, financing, and timing, in real time." },
   { cat: "Event Strategy", date: "Mar 2026", t: "Why Events Fail After the RSVP", d: "The four-touch confirmation cadence behind predictable event attendance." },
-  { cat: "Builder Marketing", date: "Mar 2026", t: "The Operational Gap Between Marketing and Sales", d: "Where pipeline goes dark — and how to close the loop without adding headcount." },
+  { cat: "Builder Marketing", date: "Mar 2026", t: "The Operational Gap Between Marketing and Sales", d: "Where pipeline goes dark, and how to close the loop without adding headcount." },
   { cat: "CRM & Follow-Up", date: "Feb 2026", t: "Why Most Builder CRMs Are Underutilized", d: "Tagging, hygiene, and accountability frameworks that turn CRMs into operating tools." },
   { cat: "Realtor Engagement", date: "Feb 2026", t: "How Realtor Outreach Drives Absorption", d: "Treating broker engagement as recurring infrastructure, not a launch-week sprint." },
   { cat: "Database Reactivation", date: "Jan 2026", t: "Reviving the Pipeline You've Already Paid For", d: "A framework for systematic re-engagement of aged registrants and dormant leads." },

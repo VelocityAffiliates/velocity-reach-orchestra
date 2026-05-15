@@ -8,9 +8,9 @@ export const Route = createFileRoute("/vision")({
   component: VisionPage,
   head: () => ({
     meta: [
-      { title: "Vision — Velocity Affiliates" },
+      { title: "Vision, Velocity Affiliates" },
       { name: "description", content: "Our vision: become the operational standard for outbound execution in residential development and sales." },
-      { property: "og:title", content: "Vision — Velocity Affiliates" },
+      { property: "og:title", content: "Vision, Velocity Affiliates" },
       { property: "og:description", content: "The operating philosophy behind Velocity's outbound execution model." },
     ],
   }),
@@ -45,7 +45,7 @@ function VisionPage() {
           <div className="max-w-2xl">
             <span className="eyebrow">The Operating Model</span>
             <h2 className="mt-6 text-3xl md:text-4xl">
-              Marketing, Velocity, Sales — operating as one motion.
+              Marketing, Velocity, Sales, operating as one motion.
             </h2>
           </div>
           <div className="mt-14">
@@ -64,8 +64,8 @@ function VisionPage() {
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed md:pt-3">
             Marketing creates pipeline. Sales closes contracts. The operational
-            space in between — broker activation, database reactivation, event
-            traffic, appointment coordination — is where most projects quietly
+            space in between, broker activation, database reactivation, event
+            traffic, appointment coordination, is where most projects quietly
             lose months of momentum. Velocity owns that layer.
           </p>
         </div>
@@ -78,7 +78,7 @@ function VisionPage() {
         </div>
         <div className="mt-16 grid md:grid-cols-2 gap-px bg-border hairline">
           {[
-            { t: "Embedded, not external", d: "We operate as part of your sales organization — aligned to your tone, CRM, and standards." },
+            { t: "Embedded, not external", d: "We operate as part of your sales organization, aligned to your tone, CRM, and standards." },
             { t: "Human, not automated", d: "Every conversation is conducted live. Cadences are structured; the delivery is human." },
             { t: "Operational, not promotional", d: "We build systems and run them. Reporting reflects the work, not the marketing." },
             { t: "Strategic, not tactical", d: "Campaigns are designed around portfolio momentum, not isolated weekly tasks." },

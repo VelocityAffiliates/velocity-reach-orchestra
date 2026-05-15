@@ -7,9 +7,9 @@ export const Route = createFileRoute("/services")({
   component: Services,
   head: () => ({
     meta: [
-      { title: "Services — Velocity Affiliates" },
-      { name: "description", content: "Realtor outreach, database reactivation, event acceleration, appointment coordination, leadership alignment, and sales enablement — built as outbound infrastructure for homebuilders." },
-      { property: "og:title", content: "Services — Velocity Affiliates" },
+      { title: "Services, Velocity Affiliates" },
+      { name: "description", content: "Realtor outreach, database reactivation, event acceleration, appointment coordination, leadership alignment, and sales enablement, built as outbound infrastructure for homebuilders." },
+      { property: "og:title", content: "Services, Velocity Affiliates" },
       { property: "og:description", content: "Structured outbound infrastructure for homebuilders." },
     ],
   }),

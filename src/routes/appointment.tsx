@@ -7,9 +7,9 @@ export const Route = createFileRoute("/appointment")({
   component: AppointmentPage,
   head: () => ({
     meta: [
-      { title: "Book an Appointment — Velocity Affiliates" },
+      { title: "Book an Appointment, Velocity Affiliates" },
       { name: "description", content: "Schedule a strategy call with the Velocity Affiliates team." },
-      { property: "og:title", content: "Book an Appointment — Velocity Affiliates" },
+      { property: "og:title", content: "Book an Appointment, Velocity Affiliates" },
       { property: "og:description", content: "Schedule a 30-minute strategy call." },
     ],
   }),

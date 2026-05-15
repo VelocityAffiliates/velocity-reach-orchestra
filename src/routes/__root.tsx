@@ -72,10 +72,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Velocity Affiliates — Outbound Execution for Builders & Sales Teams" },
-      { name: "description", content: "Velocity Affiliates is the outbound execution layer between marketing and sales — appointments, event traffic, database reactivation, and follow-through at scale." },
+      { title: "Velocity Affiliates, Outbound Execution for Builders & Sales Teams" },
+      { name: "description", content: "Velocity Affiliates is the outbound execution layer between marketing and sales, appointments, event traffic, database reactivation, and follow-through at scale." },
       { name: "author", content: "Velocity Affiliates" },
-      { property: "og:title", content: "Velocity Affiliates — Outbound Execution for Builders & Sales Teams" },
+      { property: "og:title", content: "Velocity Affiliates, Outbound Execution for Builders & Sales Teams" },
       { property: "og:description", content: "Structured human outreach systems that turn existing pipeline into booked appointments and momentum." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
