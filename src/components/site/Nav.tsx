@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const links = [
-  { to: "/services", label: "Capabilities" },
+  { to: "/services", label: "Services" },
   { to: "/results", label: "Execution" },
   { to: "/reporting", label: "Reporting" },
   { to: "/blog", label: "Insights" },
