@@ -2,12 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const links = [
-  { to: "/services", label: "Services" },
-  { to: "/results", label: "Results" },
+  { to: "/services", label: "Capabilities" },
+  { to: "/results", label: "Execution" },
   { to: "/reporting", label: "Reporting" },
-  { to: "/about", label: "About" },
   { to: "/blog", label: "Insights" },
-  { to: "/contact", label: "Contact" },
+  { to: "/about", label: "Company" },
+  { to: "/contact", label: "Connect" },
 ] as const;
 
 export function Nav() {

@@ -6,9 +6,9 @@ export const Route = createFileRoute("/insights")({
   component: InsightsPage,
   head: () => ({
     meta: [
-      { title: "Insights — Velocity Affiliates" },
+      { title: "Insights, Velocity Affiliates" },
       { name: "description", content: "Field notes and operational perspective on outbound execution, broker engagement, and sales follow-through." },
-      { property: "og:title", content: "Insights — Velocity Affiliates" },
+      { property: "og:title", content: "Insights, Velocity Affiliates" },
       { property: "og:description", content: "Operational perspective on outbound and sales execution." },
     ],
   }),
@@ -19,7 +19,7 @@ const posts = [
     cat: "Operations",
     date: "Apr 2026",
     t: "The Economics of Database Decay",
-    d: "Why every untouched lead in your CRM has a measurable monthly cost — and the cadence required to recover it.",
+    d: "Why every untouched lead in your CRM has a measurable monthly cost, and the cadence required to recover it.",
   },
   {
     cat: "Broker Strategy",

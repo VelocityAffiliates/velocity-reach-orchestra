@@ -7,9 +7,9 @@ export const Route = createFileRoute("/markets")({
   component: MarketsPage,
   head: () => ({
     meta: [
-      { title: "Markets — Velocity Affiliates" },
+      { title: "Markets, Velocity Affiliates" },
       { name: "description", content: "Markets and industries Velocity Affiliates serves: homebuilders, developers, master-planned communities, and sales organizations." },
-      { property: "og:title", content: "Markets — Velocity Affiliates" },
+      { property: "og:title", content: "Markets, Velocity Affiliates" },
       { property: "og:description", content: "Industries we serve and the regions we operate in." },
     ],
   }),
@@ -43,8 +43,8 @@ function MarketsPage() {
           <em className="italic font-normal"> at every scale.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          We serve organizations that sell housing — from regional builders to
-          national developers — with the structured outbound capacity their
+          We serve organizations that sell housing, from regional builders to
+          national developers, with the structured outbound capacity their
           internal teams are unable to operate at scale.
         </p>
       </section>

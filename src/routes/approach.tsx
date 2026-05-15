@@ -6,7 +6,7 @@ export const Route = createFileRoute("/approach")({
   component: Approach,
   head: () => ({
     meta: [
-      { title: "Approach — Velocity Affiliates" },
+      { title: "Approach, Velocity Affiliates" },
       { name: "description", content: "How Velocity operates as an embedded outbound execution partner: align, execute, deliver." },
     ],
   }),
@@ -22,7 +22,7 @@ function Approach() {
           Operational rigor, applied to outbound.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          We don't replace your sales team — we feed it. Our team works as a structured layer
+          We don't replace your sales team, we feed it. Our team works as a structured layer
           inside your operation, with clear role boundaries and consistent execution.
         </p>
       </section>

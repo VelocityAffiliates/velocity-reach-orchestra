@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
-import { CadenceDiagram, SystemDiagram } from "@/components/site/Graphics";
+import { SystemDiagram } from "@/components/site/Graphics";
 
 export const Route = createFileRoute("/services")({
   component: Services,
   head: () => ({
     meta: [
-      { title: "Services — Velocity Affiliates" },
-      { name: "description", content: "Realtor outreach, database reactivation, event acceleration, appointment coordination, leadership alignment, and sales enablement — built as outbound infrastructure for homebuilders." },
-      { property: "og:title", content: "Services — Velocity Affiliates" },
+      { title: "Services, Velocity Affiliates" },
+      { name: "description", content: "Realtor outreach, database reactivation, event acceleration, appointment coordination, leadership alignment, and sales enablement, built as outbound infrastructure for homebuilders." },
+      { property: "og:title", content: "Services, Velocity Affiliates" },
       { property: "og:description", content: "Structured outbound infrastructure for homebuilders." },
     ],
   }),
@@ -22,7 +22,7 @@ const groups = [
     sub: "Broker activation, run as a discipline.",
     items: [
       ["Broker database activation", "Live, structured outreach across your active and aspirational broker network."],
-      ["One-to-one conversations", "Real human dialogue — not bulk email blasts or automated drips."],
+      ["One-to-one conversations", "Real human dialogue, never bulk email blasts or automated drips."],
       ["Appointment generation", "Booked previews, project tours, and broker-led buyer introductions."],
       ["Geographic targeting", "Outreach calibrated to community catchments and feeder markets."],
       ["Urgency-driven messaging", "Inventory updates, incentive windows, and release timing."],
@@ -96,15 +96,15 @@ function Services() {
     <div>
       <Nav />
       <section className="container-x pt-44 md:pt-56 pb-20">
-        <span className="eyebrow">Services</span>
+        <span className="eyebrow">Capabilities</span>
         <h1 className="mt-8 display-xl text-5xl md:text-7xl max-w-5xl">
-          Structured outbound infrastructure
-          <em className="italic font-normal"> for homebuilders.</em>
+          Structured outbound execution
+          <em className="italic font-normal"> for homebuilders and developers.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Six interlocking disciplines, run as a single operating motion across
-          your portfolio — fully integrated into your CRM, your calendar, and
-          your reporting.
+          Six interlocking disciplines operating as a single execution system
+          across your portfolio. Fully integrated into your CRM, calendars,
+          reporting, and sales workflow.
         </p>
       </section>
 
@@ -138,20 +138,10 @@ function Services() {
         ))}
       </section>
 
-      <section className="container-x py-24 md:py-32">
-        <div className="max-w-2xl">
-          <span className="eyebrow">Cadence</span>
-          <h2 className="mt-6 text-3xl md:text-4xl">Designed touch by touch.</h2>
-        </div>
-        <div className="mt-14">
-          <CadenceDiagram className="w-full h-auto text-ink" />
-        </div>
-      </section>
-
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <h2 className="text-3xl md:text-5xl max-w-2xl">
-            Built for portfolios. Launched in two weeks.
+            A single execution system across your portfolio.
           </h2>
           <Link to="/appointment" className="btn-primary">Start a Conversation</Link>
         </div>

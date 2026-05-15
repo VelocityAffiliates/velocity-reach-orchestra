@@ -1,5 +1,5 @@
 /**
- * Editorial SVG graphics — minimal, architectural, system-inspired.
+ * Editorial SVG graphics, minimal, architectural, system-inspired.
  * All use currentColor so they inherit ink/foreground tones.
  */
 
@@ -8,7 +8,7 @@ export function SystemDiagram({ className = "" }: { className?: string }) {
     <svg viewBox="0 0 600 360" className={className} fill="none" stroke="currentColor" aria-hidden>
       {/* Frame */}
       <rect x="0.5" y="0.5" width="599" height="359" strokeOpacity="0.15" />
-      {/* Left node — Marketing */}
+      {/* Left node, Marketing */}
       <g>
         <circle cx="90" cy="180" r="46" strokeOpacity="0.6" />
         <circle cx="90" cy="180" r="3" fill="currentColor" stroke="none" />
@@ -16,7 +16,7 @@ export function SystemDiagram({ className = "" }: { className?: string }) {
           MARKETING
         </text>
       </g>
-      {/* Center node — Velocity */}
+      {/* Center node, Velocity */}
       <g>
         <rect x="240" y="120" width="120" height="120" strokeOpacity="0.9" />
         <rect x="252" y="132" width="96" height="96" strokeOpacity="0.25" />
@@ -25,7 +25,7 @@ export function SystemDiagram({ className = "" }: { className?: string }) {
           VELOCITY
         </text>
       </g>
-      {/* Right node — Sales */}
+      {/* Right node, Sales */}
       <g>
         <circle cx="510" cy="180" r="46" strokeOpacity="0.6" />
         <circle cx="510" cy="180" r="3" fill="currentColor" stroke="none" />
@@ -44,7 +44,7 @@ export function SystemDiagram({ className = "" }: { className?: string }) {
         <line x1="50" y1="320" x2="533" y2="320" />
       </g>
       <text x="50" y="340" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.6">
-        FIG. 01 — EXECUTION LAYER
+        FIG. 01, EXECUTION LAYER
       </text>
     </svg>
   );
@@ -70,7 +70,7 @@ export function CadenceDiagram({ className = "" }: { className?: string }) {
         );
       })}
       <text x="40" y="200" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.6">
-        FIG. 02 — OUTBOUND CADENCE
+        FIG. 02, OUTBOUND CADENCE
       </text>
     </svg>
   );
@@ -106,7 +106,7 @@ export function OrbitMark({ className = "" }: { className?: string }) {
 }
 
 export function MapPlot({ className = "" }: { className?: string }) {
-  // Stylized abstract map — coordinate plot of active markets
+  // Stylized abstract map, coordinate plot of active markets
   const pts = [
     { x: 110, y: 130, label: "VAN" },
     { x: 175, y: 145, label: "FRA" },
@@ -145,7 +145,7 @@ export function MapPlot({ className = "" }: { className?: string }) {
         </g>
       ))}
       <text x="20" y="320" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.6">
-        FIG. 03 — MARKET COVERAGE
+        FIG. 03, MARKET COVERAGE
       </text>
     </svg>
   );
@@ -166,7 +166,7 @@ export function StackedBars({ className = "" }: { className?: string }) {
         );
       })}
       <text x="20" y="194" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.6">
-        FIG. 04 — APPOINTMENT THROUGHPUT BY WEEK
+        FIG. 04, APPOINTMENT THROUGHPUT BY WEEK
       </text>
     </svg>
   );
@@ -183,7 +183,7 @@ export function GapDiagram({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 600 280" className={className} fill="none" stroke="currentColor" aria-hidden>
       <rect x="0.5" y="0.5" width="599" height="279" strokeOpacity="0.12" />
-      {/* Top track — broken */}
+      {/* Top track, broken */}
       <text x="20" y="40" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
         WITHOUT VELOCITY
       </text>
@@ -201,7 +201,7 @@ export function GapDiagram({ className = "" }: { className?: string }) {
         ↓ momentum decays here
       </text>
 
-      {/* Bottom track — Velocity bridges */}
+      {/* Bottom track, Velocity bridges */}
       <text x="20" y="180" fontSize="9" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
         WITH VELOCITY
       </text>
@@ -220,7 +220,7 @@ export function GapDiagram({ className = "" }: { className?: string }) {
         VELOCITY EXECUTION LAYER
       </text>
       <text x="20" y="270" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.5">
-        FIG. 05 — THE FOLLOW-THROUGH GAP
+        FIG. 05, THE FOLLOW-THROUGH GAP
       </text>
     </svg>
   );
@@ -230,7 +230,7 @@ export function DashboardTile({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 600 360" className={className} fill="none" stroke="currentColor" aria-hidden>
       <rect x="0.5" y="0.5" width="599" height="359" strokeOpacity="0.15" />
-      {/* Top row — KPI cells */}
+      {/* Top row, KPI cells */}
       {[
         { x: 20, label: "CALLS / WK", v: "3,124" },
         { x: 165, label: "CONVOS", v: "612" },
@@ -276,7 +276,7 @@ export function DashboardTile({ className = "" }: { className?: string }) {
         </g>
       ))}
       <text x="20" y="354" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
-        FIG. 06 — LEADERSHIP DASHBOARD
+        FIG. 06, LEADERSHIP DASHBOARD
       </text>
     </svg>
   );

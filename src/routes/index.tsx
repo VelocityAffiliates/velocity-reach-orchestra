@@ -19,10 +19,10 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Velocity Affiliates — Outbound Sales Execution for Homebuilders" },
+      { title: "Velocity Affiliates, Outbound Sales Execution for Homebuilders" },
       { name: "description", content: "Velocity Affiliates turns broker databases, prospect leads, and event traffic into booked appointments and consistent sales momentum for homebuilders and developers." },
-      { property: "og:title", content: "Velocity Affiliates — Outbound Sales Execution for Homebuilders" },
-      { property: "og:description", content: "Realtor outreach, database reactivation, event acceleration, and appointment coordination — built as infrastructure for builder sales teams." },
+      { property: "og:title", content: "Velocity Affiliates, Outbound Sales Execution for Homebuilders" },
+      { property: "og:description", content: "Realtor outreach, database reactivation, event acceleration, and appointment coordination, built as infrastructure for builder sales teams." },
     ],
   }),
 });
@@ -40,7 +40,7 @@ const reasons = [
   "Strengthens accountability across the sales floor",
   "Creates leadership visibility into outbound activity",
   "Improves morale by removing follow-up overload",
-  "Supports — never replaces — your onsite sales team",
+  "Supports, never replaces, your onsite sales team",
   "Scales across portfolios and multiple markets",
   "Built around builder sales psychology, not generic SDR playbooks",
 ];
@@ -95,7 +95,7 @@ function Home() {
           <p>
             Databases quietly decay. Realtors stop hearing from your communities.
             Events lose momentum after the RSVP. Onsite teams are correctly focused
-            on walk-ins and contracts — not outbound discipline at scale.
+            on walk-ins and contracts, not outbound discipline at scale.
           </p>
           <p>
             Marketing and sales drift apart. Leadership loses visibility into what's
@@ -109,14 +109,14 @@ function Home() {
         </div>
       </section>
 
-      {/* THE GAP — diagram */}
+      {/* THE GAP, diagram */}
       <section className="border-y border-border surface-subtle relative overflow-hidden">
         <GridPattern className="absolute inset-0 w-full h-full text-ink" />
         <div className="container-x py-28 md:py-36 relative">
           <div className="max-w-3xl">
             <span className="eyebrow">The Follow-Through Gap</span>
             <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
-              Where momentum quietly disappears — and how Velocity closes it.
+              Where momentum quietly disappears, and how Velocity closes it.
             </h2>
           </div>
           <div className="mt-16">
@@ -124,7 +124,7 @@ function Home() {
           </div>
           <div className="mt-12 grid md:grid-cols-3 gap-px bg-border hairline">
             {[
-              { t: "Outbound Execution", d: "Live, daily calling against active and dormant databases — at builder volume." },
+              { t: "Outbound Execution", d: "Live, daily calling against active and dormant databases, at builder volume." },
               { t: "Event Systems", d: "Invitation, confirmation, reminder, and recovery cadences built around your release calendar." },
               { t: "Appointment Coordination", d: "Booked, CRM-logged appointments delivered ready for the sales floor to close." },
             ].map((b) => (
@@ -160,7 +160,7 @@ function Home() {
         </div>
       </section>
 
-      {/* COMMUNITIES — imagery triptych */}
+      {/* COMMUNITIES, imagery triptych */}
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32">
           <div className="flex flex-wrap items-end justify-between gap-6">
@@ -188,7 +188,7 @@ function Home() {
                 className="w-full h-[44vh] md:h-[60vh] object-cover"
               />
               <figcaption className="mt-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground flex justify-between">
-                <span>Fig. 01 — Master-Planned Community</span>
+                <span>Fig. 01, Master-Planned Community</span>
                 <span>Aerial / Golden Hour</span>
               </figcaption>
             </figure>
@@ -202,7 +202,7 @@ function Home() {
                 className="w-full h-[44vh] md:h-[60vh] object-cover"
               />
               <figcaption className="mt-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground flex justify-between">
-                <span>Fig. 02 — Single-Family Detail</span>
+                <span>Fig. 02, Single-Family Detail</span>
                 <span>Exterior</span>
               </figcaption>
             </figure>
@@ -216,7 +216,7 @@ function Home() {
                 className="w-full h-[40vh] md:h-[56vh] object-cover"
               />
               <figcaption className="mt-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground flex justify-between">
-                <span>Fig. 03 — Townhome Streetscape</span>
+                <span>Fig. 03, Townhome Streetscape</span>
                 <span>Morning Light</span>
               </figcaption>
             </figure>
@@ -242,7 +242,7 @@ function Home() {
               <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Calls / Week Capacity</div>
             </div>
             <div>
-              <div className="font-display text-5xl md:text-6xl tabular-nums">CA · US</div>
+              <div className="font-display text-5xl md:text-6xl tabular-nums">N. America</div>
               <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Builder Coverage</div>
             </div>
             <div>
@@ -270,8 +270,8 @@ function Home() {
         <div className="mt-16 grid md:grid-cols-3 gap-px bg-border hairline">
           {[
             { s: "01", t: "Align", d: "Community onboarding, scripting, CRM coordination, and campaign strategy across your portfolio and release calendar." },
-            { s: "02", t: "Launch", d: "Outbound calling, texting, reminders, event activation, and appointment engagement — running daily inside your operation." },
-            { s: "03", t: "Deliver", d: "Booked appointments, leadership visibility, live market feedback, and measurable pipeline movement — week over week." },
+            { s: "02", t: "Launch", d: "Outbound calling, texting, reminders, event activation, and appointment engagement, running daily inside your operation." },
+            { s: "03", t: "Deliver", d: "Booked appointments, leadership visibility, live market feedback, and measurable pipeline movement, week over week." },
           ].map((step) => (
             <div key={step.s} className="bg-background p-10 md:p-12">
               <div className="font-display text-5xl text-muted-foreground">{step.s}</div>
@@ -329,7 +329,7 @@ function Home() {
             Outbound activity, made visible.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-            Weekly consolidated reporting — call volume, conversations, appointments
+            Weekly consolidated reporting, call volume, conversations, appointments
             booked, attendance rates, and feedback themes. Built for sales leadership
             review, not vanity dashboards.
           </p>
@@ -351,7 +351,7 @@ function Home() {
             prospects. We surpassed projections months ahead of schedule."
           </blockquote>
           <div className="mt-12 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
-            Cathy Grant — Sales Director
+            Cathy Grant, Sales Director
           </div>
         </div>
       </section>
@@ -402,7 +402,7 @@ function Home() {
             <span className="eyebrow text-white/70">Portfolio Coverage</span>
             <h2 className="mt-4 font-display text-3xl md:text-5xl max-w-2xl leading-[1.1]">
               Operating across active builder communities
-              <em className="italic font-normal"> in Canada and the United States.</em>
+              <em className="italic font-normal"> across North America.</em>
             </h2>
           </div>
         </div>

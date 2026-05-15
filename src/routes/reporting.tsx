@@ -7,9 +7,9 @@ export const Route = createFileRoute("/reporting")({
   component: ReportingPage,
   head: () => ({
     meta: [
-      { title: "Reporting & Insights — Velocity Affiliates" },
+      { title: "Reporting & Insights, Velocity Affiliates" },
       { name: "description", content: "Leadership visibility without added complexity. Weekly reporting on outbound activity, appointments, broker sentiment, event performance, and database health." },
-      { property: "og:title", content: "Reporting & Insights — Velocity Affiliates" },
+      { property: "og:title", content: "Reporting & Insights, Velocity Affiliates" },
       { property: "og:description", content: "Strategic intelligence and reporting for builder leadership teams." },
     ],
   }),
@@ -17,11 +17,11 @@ export const Route = createFileRoute("/reporting")({
 
 const streams = [
   { t: "Weekly Reporting", d: "A single executive-level summary of outbound activity, conversations, and appointments." },
-  { t: "Engagement Themes", d: "What buyers and brokers are actually saying — surfaced from live conversations." },
+  { t: "Engagement Themes", d: "What buyers and brokers are actually saying, surfaced from live conversations." },
   { t: "Objection Tracking", d: "Recurring resistance points across pricing, product, financing, and timing." },
   { t: "Appointment Flow", d: "Booking, confirmation, attendance, and disposition across every community." },
   { t: "Realtor Sentiment", d: "Where brokers are leaning, what they're hearing, and how they're positioning your projects." },
-  { t: "Buyer Hesitation", d: "Patterns in market hesitation — read in real time, not in retrospect." },
+  { t: "Buyer Hesitation", d: "Patterns in market hesitation, read in real time, not in retrospect." },
   { t: "Event Performance", d: "RSVP, confirmation, attendance, and post-event appointment conversion." },
   { t: "Database Health", d: "Engagement coverage across active, aged, and dormant segments of your CRM." },
   { t: "Operational Trends", d: "Portfolio-wide patterns that should inform marketing and release strategy." },
@@ -39,7 +39,7 @@ function ReportingPage() {
           <em className="italic font-normal"> without added complexity.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Velocity operates as a strategic intelligence and reporting partner — giving
+          Velocity operates as a strategic intelligence and reporting partner, giving
           builder leadership a single, consistent view into what's happening between
           marketing, sales, and the buyer.
         </p>
@@ -81,7 +81,7 @@ function ReportingPage() {
           </div>
           <div className="md:col-span-8">
             <p className="font-display text-3xl md:text-5xl leading-[1.1] text-white">
-              Reporting that reflects the work — not the marketing of the work.
+              Reporting that reflects the work, not the marketing of the work.
             </p>
             <p className="mt-8 text-white/70 leading-relaxed text-lg max-w-2xl">
               Built for VPs of Sales, ownership groups, and project leadership who

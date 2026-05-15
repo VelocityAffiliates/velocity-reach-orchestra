@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
-      { title: "About — Velocity Affiliates" },
+      { title: "About, Velocity Affiliates" },
       { name: "description", content: "Built from inside the builder world. Velocity Affiliates is the outbound execution and momentum infrastructure company for homebuilders and developers." },
-      { property: "og:title", content: "About — Velocity Affiliates" },
+      { property: "og:title", content: "About, Velocity Affiliates" },
       { property: "og:description", content: "Operational infrastructure for builder sales momentum, founded by Brooke Scott." },
     ],
   }),
@@ -18,12 +18,12 @@ export const Route = createFileRoute("/about")({
 const differences = [
   { t: "Massive outbound volume", d: "Thousands of live conversations every week, sustained across portfolios." },
   { t: "Human-first outreach", d: "Every call is conducted by a real person trained in builder sales psychology." },
-  { t: "Live appointment coordination", d: "Confirmed, CRM-logged, ready for sales handoff — never a thrown lead." },
+  { t: "Live appointment coordination", d: "Confirmed, CRM-logged, ready for sales handoff, never a thrown lead." },
   { t: "Event acceleration systems", d: "Invitation, confirmation, reminder, and recovery cadences run as a single motion." },
   { t: "Builder specialization", d: "We work exclusively with homebuilders, developers, and their sales partners." },
   { t: "Leadership-level reporting", d: "Weekly visibility your VPs and ownership group can actually act on." },
   { t: "Execution speed", d: "Programs typically launch within two weeks of alignment." },
-  { t: "Operational visibility", d: "Reporting that reflects the work — not the marketing of the work." },
+  { t: "Operational visibility", d: "Reporting that reflects the work, not the marketing of the work." },
 ];
 
 function About() {
@@ -39,9 +39,9 @@ function About() {
             <em className="italic font-normal"> the builder world.</em>
           </h1>
           <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Velocity Affiliates exists to give builders, developers, and sales
-            organizations the one capability the industry consistently underbuilds:
-            disciplined, human-led follow-through at scale.
+            Velocity Affiliates provides homebuilders and developers with one
+            capability the industry consistently underbuilds: disciplined,
+            human-led execution at scale.
           </p>
         </div>
         <div className="md:col-span-3 flex md:justify-end">
@@ -58,17 +58,17 @@ function About() {
           </div>
           <div className="md:col-span-8 space-y-5 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Velocity was founded by Brooke Scott, drawing on more than 25 years of
-              real estate leadership across builders, developers, and sales
-              organizations in Western Canada and the United States.
+              Velocity was founded by Brooke Scott, drawing on more than 25
+              years of real estate leadership across builders, developers, and
+              sales organizations in North America.
             </p>
             <p>
-              After years of working alongside marketing departments and onsite sales
-              teams, one pattern repeated across nearly every project:
+              After years working alongside marketing departments and onsite
+              sales teams, one pattern repeated across nearly every project:
             </p>
             <p className="text-foreground text-2xl font-display leading-snug">
-              Builders were generating leads — but nobody truly owned outbound
-              follow-through at scale.
+              Builders were generating leads, but no one truly owned outbound
+              execution at scale.
             </p>
           </div>
         </div>
@@ -79,15 +79,15 @@ function About() {
         <div className="container-x py-24 md:py-32">
           <div className="max-w-2xl">
             <span className="eyebrow">Why Velocity Exists</span>
-            <h2 className="mt-6 text-4xl md:text-5xl">The quiet operational gap.</h2>
+            <h2 className="mt-6 text-4xl md:text-5xl">A quiet operational gap.</h2>
           </div>
           <div className="mt-14 grid md:grid-cols-3 gap-px bg-border hairline">
             {[
-              ["Dead databases", "CRMs full of leads nobody is consistently working."],
+              ["Dead databases", "CRMs full of leads no one is consistently working."],
               ["Overloaded sales teams", "Onsite teams correctly focused on contracts and walk-ins."],
               ["Disconnected marketing", "Marketing investment that never reaches a live conversation."],
               ["Weak nurture systems", "Pipelines that decay between launch events."],
-              ["Event follow-through gaps", "RSVPs that never become attendance — or appointments."],
+              ["Event coordination gaps", "RSVPs that never become attendance, or appointments."],
               ["Limited leadership visibility", "Activity assumed, not actually measured."],
             ].map(([t, d]) => (
               <div key={t} className="bg-background p-8">
@@ -97,7 +97,7 @@ function About() {
             ))}
           </div>
           <p className="mt-14 max-w-3xl text-xl md:text-2xl font-display leading-snug">
-            Velocity is operational infrastructure for builder sales momentum.
+            Velocity is structured outbound execution for homebuilders and developers.
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ function About() {
               We are not transactional salespeople.
             </p>
             <p className="font-display text-3xl md:text-5xl leading-[1.1] text-white">
-              We are operational infrastructure for builders who need measurable momentum.
+              We provide structured outbound execution for homebuilders and developers.
             </p>
           </div>
         </div>
@@ -142,7 +142,7 @@ function About() {
       <section className="container-x py-28 md:py-36 grid md:grid-cols-2 gap-16">
         <div>
           <span className="eyebrow">Markets Served</span>
-          <h2 className="mt-6 text-3xl md:text-4xl">Canada & United States.</h2>
+          <h2 className="mt-6 text-3xl md:text-4xl">North America.</h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
             Portfolio-level builder support across British Columbia, Alberta,
             Ontario, and Pacific Northwest U.S. markets.
@@ -158,7 +158,7 @@ function About() {
               "Marketing alignment and shared cadence",
               "Sales enablement and accountability frameworks",
               "Operational rhythm with weekly visibility",
-              "Embedded — never outsourced",
+              "Embedded, never outsourced",
             ].map((x) => (
               <li key={x} className="border-b border-border pb-3">
                 {x}
