@@ -96,15 +96,15 @@ function Services() {
     <div>
       <Nav />
       <section className="container-x pt-44 md:pt-56 pb-20">
-        <span className="eyebrow">Services</span>
+        <span className="eyebrow">Capabilities</span>
         <h1 className="mt-8 display-xl text-5xl md:text-7xl max-w-5xl">
-          Structured outbound infrastructure
-          <em className="italic font-normal"> for homebuilders.</em>
+          Structured outbound execution
+          <em className="italic font-normal"> for homebuilders and developers.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Six interlocking disciplines, run as a single operating motion across
-          your portfolio — fully integrated into your CRM, your calendar, and
-          your reporting.
+          Six interlocking disciplines operating as a single execution system
+          across your portfolio. Fully integrated into your CRM, calendars,
+          reporting, and sales workflow.
         </p>
       </section>
 
