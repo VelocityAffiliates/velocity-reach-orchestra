@@ -37,12 +37,8 @@ function Contact() {
               <a href="mailto:brooke@velocityaffiliates.com" className="mt-3 block font-display text-xl">brooke@velocityaffiliates.com</a>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Offices</div>
-              <div className="mt-3 font-display text-xl">Vancouver · Victoria · Kelowna</div>
-            </div>
-            <div>
               <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Markets</div>
-              <div className="mt-3 font-display text-xl">Canada &nbsp;·&nbsp; United States</div>
+              <div className="mt-3 font-display text-xl">North America</div>
             </div>
           </div>
 
