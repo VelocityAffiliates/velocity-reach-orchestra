@@ -347,7 +347,7 @@ function Home() {
             prospects. We surpassed projections months ahead of schedule."
           </blockquote>
           <div className="mt-12 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
-            Cathy Grant, Sales Director
+            Cathy Grant, VP of Sales
           </div>
         </div>
       </section>
