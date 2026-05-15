@@ -180,7 +180,7 @@ function Home() {
             <figure className="md:col-span-7 relative overflow-hidden">
               <img
                 src={neighborhoodAerial}
-                alt="Aerial view of a modern residential neighborhood at golden hour"
+                alt="Aerial view of a California master-planned community at golden hour"
                 width={1600}
                 height={1024}
                 loading="lazy"
@@ -208,7 +208,7 @@ function Home() {
             <figure className="md:col-span-12 relative overflow-hidden mt-2">
               <img
                 src={neighborhoodStreet}
-                alt="Quiet streetscape of modern townhomes with warm wood and white facades"
+                alt="Quiet streetscape of California townhomes with stucco facades, palms, and crape myrtles"
                 width={1600}
                 height={900}
                 loading="lazy"
