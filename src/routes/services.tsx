@@ -89,6 +89,21 @@ const groups = [
       ["Accountability frameworks", "Visible standards across every community in the portfolio."],
     ],
   },
+  {
+    n: "07",
+    title: "CRM & Operational Enablement",
+    sub: "Operational systems designed for homebuilders and developers.",
+    items: [
+      ["CRM workflow alignment", "Configured cadences, dispositions, and stages that mirror how your sales operation actually runs."],
+      ["Lead routing & segmentation", "Structured routing logic and segmentation that protect speed-to-lead and project-level accountability."],
+      ["Sales & marketing visibility", "Shared operating view across marketing investment, outbound activity, and sales outcomes."],
+      ["Appointment tracking systems", "Booked, confirmed, attended, and outcome states tracked end-to-end inside the CRM."],
+      ["Follow-up accountability", "Cadence ownership and follow-through standards visible across teams and communities."],
+      ["Event workflow coordination", "Pre-event, event-day, and post-event workflows aligned across marketing, sales, and Velocity."],
+      ["Team adoption support", "Embedded operating cadence that drives consistent CRM usage across your sales floor."],
+      ["Reporting & operational clarity", "Leadership reporting structured around pipeline movement, not vanity activity."],
+    ],
+  },
 ];
 
 function Services() {
