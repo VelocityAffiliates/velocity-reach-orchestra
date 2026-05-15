@@ -12,9 +12,9 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-8 max-w-md text-sm text-muted-foreground leading-relaxed">
-            Outbound sales execution and momentum infrastructure for homebuilders and developers.
-            Realtor outreach, database reactivation, event acceleration, and appointment
-            coordination — run as a system.
+            Outbound sales execution and momentum infrastructure for homebuilders
+            and developers. Realtor outreach, database reactivation, event
+            acceleration, and appointment coordination, run as a system.
           </p>
           <div className="mt-8 flex gap-3">
             {["LinkedIn", "Instagram", "X"].map((s) => (
