@@ -280,9 +280,6 @@ function Home() {
             </div>
           ))}
         </div>
-        <div className="mt-20 max-w-4xl mx-auto">
-          <CadenceDiagram className="w-full h-auto text-ink" />
-        </div>
       </section>
 
       {/* MARKET INTEL */}
