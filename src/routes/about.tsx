@@ -58,17 +58,17 @@ function About() {
           </div>
           <div className="md:col-span-8 space-y-5 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Velocity was founded by Brooke Scott, drawing on more than 25 years of
-              real estate leadership across builders, developers, and sales
-              organizations in Western Canada and the United States.
+              Velocity was founded by Brooke Scott, drawing on more than 25
+              years of real estate leadership across builders, developers, and
+              sales organizations in North America.
             </p>
             <p>
-              After years of working alongside marketing departments and onsite sales
-              teams, one pattern repeated across nearly every project:
+              After years working alongside marketing departments and onsite
+              sales teams, one pattern repeated across nearly every project:
             </p>
             <p className="text-foreground text-2xl font-display leading-snug">
-              Builders were generating leads — but nobody truly owned outbound
-              follow-through at scale.
+              Builders were generating leads, but no one truly owned outbound
+              execution at scale.
             </p>
           </div>
         </div>
