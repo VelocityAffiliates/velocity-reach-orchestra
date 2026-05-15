@@ -117,7 +117,7 @@ function Services() {
           <em className="italic font-normal"> for homebuilders and developers.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Six interlocking disciplines operating as a single execution system
+          Seven interlocking disciplines operating as a single execution system
           across your portfolio. Fully integrated into your CRM, calendars,
           reporting, and sales workflow.
         </p>
