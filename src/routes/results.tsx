@@ -82,7 +82,7 @@ function ResultsPage() {
       <section className="border-y border-border bg-ink text-white">
         <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-x-10 gap-y-14 items-start">
           <div className="md:col-span-4">
-            <div className="font-display text-6xl md:text-7xl text-white tabular-nums leading-none">100k+</div>
+            <div className="font-display text-6xl md:text-7xl text-white tabular-nums leading-none">100,000+</div>
             <div className="mt-5 text-[11px] tracking-[0.28em] uppercase text-white/55">Live Outreach Calls Annually</div>
           </div>
           <div className="md:col-span-8 grid sm:grid-cols-2 gap-px bg-white/15">
@@ -132,8 +132,8 @@ function ResultsPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-14 border-t border-border pt-14">
             <Counter to={250000} suffix="+" label="Outbound Touches" />
-            <Counter to={612} label="Live Conversations / Wk" />
-            <Counter to={184} label="Appointments / Wk" />
+            <Counter to={10000} suffix="+" label="Event RSVPs Coordinated" />
+            <Counter to={3000} suffix="+" label="Appointments Coordinated" />
             <Counter to={98} suffix="%" label="CRM-Logged Activity" />
           </div>
         </div>
