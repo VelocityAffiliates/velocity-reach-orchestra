@@ -19,7 +19,7 @@ const cases = [
   {
     n: "01",
     t: "Master-Planned Community",
-    region: "Lower Mainland, BC",
+    region: "Southern California",
     type: "Multi-Phase Release",
     metric: "120%",
     metricLabel: "of forecast",
@@ -28,7 +28,7 @@ const cases = [
   {
     n: "02",
     t: "Concrete High-Rise Tower",
-    region: "Vancouver, BC",
+    region: "Bay Area, California",
     type: "Pre-Sale Launch",
     metric: "1,800+",
     metricLabel: "broker touches",
@@ -37,7 +37,7 @@ const cases = [
   {
     n: "03",
     t: "Townhome Community",
-    region: "Fraser Valley, BC",
+    region: "Inland Empire, California",
     type: "Standing Inventory",
     metric: "9 wks",
     metricLabel: "to sold out",
