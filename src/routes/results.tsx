@@ -23,7 +23,7 @@ const cases = [
     type: "Multi-Phase Release",
     metric: "120%",
     metricLabel: "of forecast",
-    body: "Dedicated outbound program across registered database and broker network ahead of Phase 2 release. Supported absorption pacing ahead of original release projections.",
+    body: "Dedicated outbound execution program supporting broker engagement, database reactivation, appointment coordination, and leadership visibility ahead of Phase 2 release. Activity, dispositions, and pipeline movement reported weekly to the project leadership team.",
   },
   {
     n: "02",
@@ -32,7 +32,7 @@ const cases = [
     type: "Pre-Sale Launch",
     metric: "1,800+",
     metricLabel: "broker touches",
-    body: "Pre-launch broker activation and database warm-up. Sustained appointment volume from launch weekend through three release events.",
+    body: "Pre-launch broker activation paired with structured database warm-up and CRM workflow alignment across the sales operation. Sustained appointment volume and consistent reporting cadence from launch weekend through three release events.",
   },
   {
     n: "03",
@@ -41,7 +41,7 @@ const cases = [
     type: "Standing Inventory",
     metric: "9 wks",
     metricLabel: "to sold out",
-    body: "Inventory acceleration program: structured re-engagement of aged registrants paired with broker incentive outreach. Supported accelerated inventory absorption ahead of construction completion.",
+    body: "Inventory acceleration program coordinating structured re-engagement of aged registrants, broker incentive outreach, and appointment routing into the onsite sales team. Operational rhythm maintained between marketing, sales, and ownership through weekly leadership reporting.",
   },
   {
     n: "04",
@@ -50,7 +50,7 @@ const cases = [
     type: "Event Engine",
     metric: "92%",
     metricLabel: "RSVP confirmation",
-    body: "Invitation, confirmation, and reminder cadence for two preview events. Delivered consistent attendance from out-of-market buyers.",
+    body: "End-to-end event coordination across two preview weekends, including invitation, confirmation, reminder, and post-event appointment cadences. Attendance and follow-through tracked inside the CRM and surfaced through leadership-level reporting.",
   },
 ];
 
