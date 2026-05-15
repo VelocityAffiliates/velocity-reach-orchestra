@@ -22,6 +22,7 @@ import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AppointmentRouteImport } from './routes/appointment'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const VisionRoute = VisionRouteImport.update({
   id: '/vision',
@@ -88,13 +89,18 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/appointment': typeof AppointmentRoute
   '/approach': typeof ApproachRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/markets': typeof MarketsRoute
@@ -103,13 +109,14 @@ export interface FileRoutesByFullPath {
   '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
   '/vision': typeof VisionRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/appointment': typeof AppointmentRoute
   '/approach': typeof ApproachRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/markets': typeof MarketsRoute
@@ -118,6 +125,7 @@ export interface FileRoutesByTo {
   '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
   '/vision': typeof VisionRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,7 +133,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/appointment': typeof AppointmentRoute
   '/approach': typeof ApproachRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/markets': typeof MarketsRoute
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
   '/vision': typeof VisionRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/results'
     | '/services'
     | '/vision'
+    | '/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/results'
     | '/services'
     | '/vision'
+    | '/blog/$slug'
   id:
     | '__root__'
     | '/'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
     | '/results'
     | '/services'
     | '/vision'
+    | '/blog/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -188,7 +200,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AppointmentRoute: typeof AppointmentRoute
   ApproachRoute: typeof ApproachRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   InsightsRoute: typeof InsightsRoute
   MarketsRoute: typeof MarketsRoute
@@ -292,15 +304,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AppointmentRoute: AppointmentRoute,
   ApproachRoute: ApproachRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   InsightsRoute: InsightsRoute,
   MarketsRoute: MarketsRoute,

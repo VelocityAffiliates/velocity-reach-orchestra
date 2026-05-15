@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { articles, featuredSlug, getArticle } from "@/lib/articles";
 
 export const Route = createFileRoute("/blog")({
   component: BlogPage,
@@ -14,23 +15,8 @@ export const Route = createFileRoute("/blog")({
   }),
 });
 
-const featured = {
-  cat: "Builder Sales Strategy",
-  date: "May 2026",
-  t: "Builders Don't Need More Leads. They Need More Follow-Through.",
-  d: "Why the next decade of builder sales performance will be defined by outbound discipline, not lead volume. A look at the operational gap quietly costing builders absorption.",
-};
-
-const posts = [
-  { cat: "CRM & Follow-Up", date: "May 2026", t: "Why Builder Databases Quietly Die", d: "The economics of database decay and the cadence required to recover it." },
-  { cat: "Sales Enablement", date: "Apr 2026", t: "The Hidden Cost of Weak Follow-Up", d: "What every untouched lead in your CRM actually costs across a release cycle." },
-  { cat: "Market Intelligence", date: "Apr 2026", t: "What Live Buyer Conversations Reveal About the Market", d: "Patterns we're hearing across pricing, financing, and timing, in real time." },
-  { cat: "Event Strategy", date: "Mar 2026", t: "Why Events Fail After the RSVP", d: "The four-touch confirmation cadence behind predictable event attendance." },
-  { cat: "Builder Marketing", date: "Mar 2026", t: "The Operational Gap Between Marketing and Sales", d: "Where pipeline goes dark, and how to close the loop without adding headcount." },
-  { cat: "CRM & Follow-Up", date: "Feb 2026", t: "Why Most Builder CRMs Are Underutilized", d: "Tagging, hygiene, and accountability frameworks that turn CRMs into operating tools." },
-  { cat: "Realtor Engagement", date: "Feb 2026", t: "How Realtor Outreach Drives Absorption", d: "Treating broker engagement as recurring infrastructure, not a launch-week sprint." },
-  { cat: "Database Reactivation", date: "Jan 2026", t: "Reviving the Pipeline You've Already Paid For", d: "A framework for systematic re-engagement of aged registrants and dormant leads." },
-];
+const featured = getArticle(featuredSlug)!;
+const posts = articles.filter((a) => a.slug !== featuredSlug);
 
 const categories = [
   "Builder Sales Strategy",
@@ -72,7 +58,11 @@ function BlogPage() {
 
       {/* FEATURED */}
       <section className="container-x py-20 md:py-28">
-        <article className="grid md:grid-cols-12 gap-10 group cursor-pointer">
+        <Link
+          to="/blog/$slug"
+          params={{ slug: featured.slug }}
+          className="grid md:grid-cols-12 gap-10 group"
+        >
           <div className="md:col-span-7">
             <div className="aspect-[16/10] bg-ink/95 relative overflow-hidden">
               <div className="absolute inset-0 grid place-items-center">
@@ -95,16 +85,18 @@ function BlogPage() {
             <p className="mt-6 text-muted-foreground leading-relaxed">{featured.d}</p>
             <span className="link-arrow mt-8 self-start">Read Essay →</span>
           </div>
-        </article>
+        </Link>
       </section>
 
       {/* GRID */}
       <section className="border-t border-border">
         <div className="container-x">
           {posts.map((p, i) => (
-            <article
-              key={p.t}
-              className={`grid md:grid-cols-12 gap-10 py-12 md:py-14 group cursor-pointer ${
+            <Link
+              key={p.slug}
+              to="/blog/$slug"
+              params={{ slug: p.slug }}
+              className={`grid md:grid-cols-12 gap-10 py-12 md:py-14 group ${
                 i > 0 ? "border-t border-border" : ""
               }`}
             >
@@ -119,7 +111,7 @@ function BlogPage() {
               <div className="md:col-span-2 md:text-right md:pt-3">
                 <span className="link-arrow">Read →</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
