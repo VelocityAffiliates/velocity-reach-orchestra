@@ -142,7 +142,7 @@ function About() {
       <section className="container-x py-28 md:py-36 grid md:grid-cols-2 gap-16">
         <div>
           <span className="eyebrow">Markets Served</span>
-          <h2 className="mt-6 text-3xl md:text-4xl">Canada & United States.</h2>
+          <h2 className="mt-6 text-3xl md:text-4xl">North America.</h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
             Portfolio-level builder support across British Columbia, Alberta,
             Ontario, and Pacific Northwest U.S. markets.
