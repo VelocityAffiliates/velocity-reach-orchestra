@@ -228,7 +228,7 @@ function Home() {
           <div className="max-w-2xl">
             <span className="eyebrow text-white/60">Built for Builders</span>
             <h2 className="mt-6 text-4xl md:text-5xl text-white">
-              Operating at builder volume.
+              Operating at builder scale.
             </h2>
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-14 border-t border-white/15 pt-14">
