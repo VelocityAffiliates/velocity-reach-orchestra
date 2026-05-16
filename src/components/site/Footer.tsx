@@ -45,7 +45,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm">
             <li><Link to="/about" className="hover:opacity-60 transition-opacity">Company</Link></li>
             <li><Link to="/markets" className="hover:opacity-60 transition-opacity">Markets</Link></li>
-            <li><Link to="/appointment" className="hover:opacity-60 transition-opacity">Book a Call</Link></li>
+            <li><a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">Book a Call</a></li>
             <li><Link to="/contact" className="hover:opacity-60 transition-opacity">Connect</Link></li>
           </ul>
         </div>

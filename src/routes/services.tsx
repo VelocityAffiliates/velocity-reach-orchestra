@@ -165,7 +165,7 @@ function Services() {
           <h2 className="text-3xl md:text-5xl max-w-2xl">
             A single execution system across your portfolio.
           </h2>
-          <Link to="/appointment" className="btn-primary">Start a Conversation</Link>
+          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Start a Conversation</a>
         </div>
       </section>
       <Footer />

@@ -298,7 +298,7 @@ function About() {
           <h2 className="font-display text-3xl md:text-5xl max-w-xl">
             Let's talk about momentum across your portfolio.
           </h2>
-          <Link to="/appointment" className="btn-primary">Book a Strategy Call</Link>
+          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Strategy Call</a>
         </div>
       </section>
       <Footer />

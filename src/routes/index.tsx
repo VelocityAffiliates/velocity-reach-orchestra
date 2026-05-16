@@ -64,7 +64,7 @@ function Home() {
               sales momentum.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <Link to="/appointment" className="btn-primary">Book a Strategy Call</Link>
+              <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Strategy Call</a>
               <Link to="/services" className="btn-outline">See How We Work</Link>
             </div>
           </div>
@@ -496,12 +496,14 @@ function Home() {
             <em className="italic font-normal block mt-2"> Velocity makes sure the conversation happens.</em>
           </h2>
           <div className="mt-12">
-            <Link
-              to="/appointment"
+            <a
+              href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 text-[11px] uppercase tracking-[0.22em] hover:bg-white/90 transition-colors"
             >
               Schedule a Strategy Call
-            </Link>
+            </a>
           </div>
         </div>
       </section>

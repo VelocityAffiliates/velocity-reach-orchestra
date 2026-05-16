@@ -148,7 +148,7 @@ function BlogPage() {
       <section className="border-t border-border">
         <div className="container-x py-20 md:py-28 flex flex-wrap items-end justify-between gap-6">
           <h2 className="text-3xl md:text-5xl max-w-2xl">Want this perspective applied to your portfolio?</h2>
-          <Link to="/appointment" className="btn-primary">Book a Strategy Call</Link>
+          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Strategy Call</a>
         </div>
       </section>
 
