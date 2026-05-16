@@ -36,12 +36,14 @@ export function Nav() {
               Affiliates
             </span>
           </Link>
-          <Link
-            to="/appointment"
+          <a
+            href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex absolute right-0 top-1/2 -translate-y-1/2 text-[11px] uppercase tracking-[0.22em] border border-ink px-4 py-2 hover:bg-ink hover:text-white transition-colors"
           >
             Book a Call
-          </Link>
+          </a>
           <button
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
@@ -68,9 +70,9 @@ export function Nav() {
                 {l.label}
               </Link>
             ))}
-            <Link to="/appointment" onClick={() => setOpen(false)} className="btn-primary mt-4 justify-center">
+            <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary mt-4 justify-center">
               Book a Call
-            </Link>
+            </a>
           </nav>
         </div>
       )}

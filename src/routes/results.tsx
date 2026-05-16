@@ -173,7 +173,7 @@ function ResultsPage() {
           <h2 className="text-4xl md:text-5xl max-w-2xl">
             Looking for this kind of execution inside your portfolio?
           </h2>
-          <Link to="/appointment" className="btn-primary">Book a Call</Link>
+          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Call</a>
         </div>
       </section>
 

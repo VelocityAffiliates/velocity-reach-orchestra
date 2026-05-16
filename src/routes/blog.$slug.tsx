@@ -64,7 +64,7 @@ function ArticlePage() {
 
         <div className="mt-20 border-t border-border pt-10 flex flex-wrap items-center justify-between gap-4">
           <Link to="/blog" className="link-arrow">← All Insights</Link>
-          <Link to="/appointment" className="btn-primary">Book a Strategy Call</Link>
+          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Strategy Call</a>
         </div>
       </article>
 

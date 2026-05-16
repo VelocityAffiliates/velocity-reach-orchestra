@@ -106,7 +106,7 @@ function ReportingPage() {
           <h2 className="text-4xl md:text-5xl max-w-2xl">
             See the reporting we deliver to leadership teams.
           </h2>
-          <Link to="/appointment" className="btn-primary">Request a Sample</Link>
+          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Request a Sample</a>
         </div>
       </section>
 
