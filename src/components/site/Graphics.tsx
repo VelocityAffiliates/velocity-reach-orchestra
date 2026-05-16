@@ -232,8 +232,8 @@ export function GapDiagram({ className = "" }: { className?: string }) {
 
 export function DashboardTile({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 600 140" className={className} fill="none" stroke="currentColor" aria-hidden>
-      <rect x="0.5" y="0.5" width="599" height="139" strokeOpacity="0.15" />
+    <svg viewBox="0 0 600 360" className={className} fill="none" stroke="currentColor" aria-hidden>
+      <rect x="0.5" y="0.5" width="599" height="359" strokeOpacity="0.15" />
       {/* Top row, KPI cells */}
       {[
         { x: 30, label: "OUTREACH ACTIVITY", v: "3,124" },
@@ -250,12 +250,41 @@ export function DashboardTile({ className = "" }: { className?: string }) {
           </text>
         </g>
       ))}
-      <text x="20" y="126" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
+      {/* Chart area */}
+      <rect x="20" y="120" width="395" height="220" strokeOpacity="0.2" />
+      <line x1="20" y1="300" x2="415" y2="300" strokeOpacity="0.3" />
+      <polyline
+        points="40,280 80,250 120,260 160,220 200,200 240,210 280,170 320,160 360,140 400,130"
+        strokeOpacity="0.85"
+      />
+      {[280, 250, 260, 220, 200, 210, 170, 160, 140, 130].map((y, i) => (
+        <circle key={i} cx={40 + i * 40} cy={y} r="3" fill="currentColor" stroke="none" />
+      ))}
+      {/* Side panel */}
+      <rect x="430" y="120" width="150" height="220" strokeOpacity="0.2" />
+      <text x="442" y="142" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none" opacity="0.6">
+        ENGAGEMENT MIX
+      </text>
+      {[
+        { y: 168, w: 130, label: "Brokers" },
+        { y: 200, w: 96, label: "Database" },
+        { y: 232, w: 78, label: "Events" },
+        { y: 264, w: 56, label: "Re-engage" },
+      ].map((b) => (
+        <g key={b.label}>
+          <rect x="442" y={b.y} width={b.w} height="6" fill="currentColor" stroke="none" opacity="0.85" />
+          <text x="442" y={b.y - 4} fontSize="8" letterSpacing="2" fill="currentColor" stroke="none" opacity="0.7">
+            {b.label}
+          </text>
+        </g>
+      ))}
+      <text x="20" y="354" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
         FIG. 06, LEADERSHIP DASHBOARD
       </text>
     </svg>
   );
 }
+
 
 export function VerticalRule({ className = "" }: { className?: string }) {
   return (
