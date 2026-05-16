@@ -208,29 +208,86 @@ function About() {
         <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <span className="eyebrow">Operational Advisory</span>
-            <h2 className="mt-6 text-3xl md:text-4xl">Embedded operational partnership.</h2>
+            <h2 className="mt-6 text-3xl md:text-4xl leading-tight">
+              Embedded operational partnership for builder leadership teams.
+            </h2>
           </div>
-          <div className="md:col-span-8">
+          <div className="md:col-span-8 space-y-8">
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
               Velocity supports builder leadership teams with the operational
-              infrastructure that sits behind sustained sales momentum,
-              integrated directly into the way your organization already runs.
+              infrastructure behind sustained sales momentum, integrated
+              directly into the way your organization already runs.
             </p>
-            <ul className="mt-12 grid sm:grid-cols-2 gap-px bg-border hairline">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              Because our team operates inside live builder databases every
+              day, leadership gains visibility that most traditional
+              consultants never see.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-px bg-border hairline">
               {[
-                ["Operational alignment", "Shared cadence across marketing, sales, and project leadership."],
-                ["Outbound workflow refinement", "Tightened sequences, ownership, and follow-through across the portfolio."],
-                ["Reporting structure", "Leadership reporting framed around pipeline movement and execution clarity."],
-                ["CRM process visibility", "Workflow, disposition, and stage usage made consistent across communities."],
-                ["Sales enablement strategy", "Scripts, cadences, and accountability frameworks designed for builder sales floors."],
-                ["Event coordination systems", "Pre-event, event, and post-event workflows operating as a single motion."],
-              ].map(([t, d]) => (
-                <li key={t} className="bg-background p-7">
-                  <h3 className="text-lg">{t}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{d}</p>
+                "Sales and marketing alignment",
+                "CRM workflow refinement",
+                "Outbound cadence strategy",
+                "Event system planning",
+                "Reporting structure development",
+                "Appointment process optimization",
+                "Sales enablement systems",
+                "Team accountability frameworks",
+                "Leadership working sessions",
+                "Broker engagement strategy",
+                "Pipeline visibility and follow-through systems",
+              ].map((t) => (
+                <li key={t} className="bg-background p-5 text-base">
+                  {t}
                 </li>
               ))}
             </ul>
+            <p className="text-foreground font-display text-xl md:text-2xl leading-snug max-w-2xl">
+              This support is grounded in live execution, not theory, slide
+              decks, or disconnected consulting models.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SALES ENABLEMENT SYSTEMS */}
+      <section className="border-b border-border">
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Sales Enablement Systems</span>
+            <h2 className="mt-6 text-3xl md:text-4xl leading-tight">
+              Built for builder sales environments.
+            </h2>
+          </div>
+          <div className="md:col-span-8 space-y-8">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              Velocity supports onsite sales teams and leadership groups with
+              operational enablement designed to improve outbound
+              consistency, follow-through discipline, appointment handling,
+              and CRM adoption across active communities.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-px bg-border hairline">
+              {[
+                "Outbound cadence frameworks",
+                "Follow-up structure and accountability",
+                "CRM workflow consistency",
+                "Appointment handling processes",
+                "Broker engagement strategy",
+                "Script refinement and objection handling",
+                "Event conversion systems",
+                "Sales and marketing alignment",
+                "Leadership reporting cadence",
+                "Team workflow optimization",
+              ].map((t) => (
+                <li key={t} className="bg-background p-5 text-base">
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <p className="text-foreground font-display text-xl md:text-2xl leading-snug max-w-2xl">
+              This work is grounded in live field execution across active
+              builder portfolios, not generic sales theory.
+            </p>
           </div>
         </div>
       </section>
