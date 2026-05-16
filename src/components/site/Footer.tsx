@@ -18,16 +18,24 @@ export function Footer() {
             acceleration, and appointment coordination, run as a system.
           </p>
           <div className="mt-8 flex gap-3">
-            {["LinkedIn", "Instagram", "X"].map((s) => (
-              <a
-                key={s}
-                href="#"
-                aria-label={s}
-                className="h-9 w-9 grid place-items-center border border-border hover:border-ink transition-colors text-[10px] uppercase tracking-widest"
-              >
-                {s[0]}
-              </a>
-            ))}
+            <a
+              href="https://www.linkedin.com/company/velocityaffiliates"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="h-9 w-9 grid place-items-center border border-border hover:border-ink transition-colors"
+            >
+              <Linkedin size={16} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.instagram.com/velocityaffiliates/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="h-9 w-9 grid place-items-center border border-border hover:border-ink transition-colors"
+            >
+              <Instagram size={16} strokeWidth={1.5} />
+            </a>
           </div>
         </div>
 
