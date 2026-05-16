@@ -289,11 +289,11 @@ function Home() {
               </div>
               <ul className="mt-6 grid sm:grid-cols-2 gap-px bg-border hairline">
                 {[
-                  ["British Columbia", "Multi-Community Builder Support"],
-                  ["Alberta", "Sales Momentum Infrastructure"],
-                  ["Ontario", "Active Release Coordination"],
-                  ["California", "Broker & Buyer Engagement Systems"],
-                  ["Pacific Northwest U.S.", "Portfolio-Level Operational Support"],
+                  ["Master-Planned Communities", "Large-scale engagement systems supporting phased releases and ongoing absorption."],
+                  ["Standing Inventory Programs", "Reactivation infrastructure designed to restore momentum across aging pipelines."],
+                  ["Multi-Phase Releases", "Structured outreach and appointment coordination aligned to evolving inventory cadence."],
+                  ["Concrete & Urban Product", "High-touch broker and buyer engagement within dense urban sales environments."],
+                  ["Portfolio-Level Operations", "Embedded operational support across multiple active communities simultaneously."],
                 ].map(([m, d]) => (
                   <li key={m} className="bg-background p-6">
                     <div className="text-[11px] uppercase tracking-[0.24em]">
