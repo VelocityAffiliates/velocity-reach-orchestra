@@ -390,6 +390,39 @@ function Home() {
         </div>
       </section>
 
+      {/* BEYOND OUTREACH ALONE */}
+      <section className="border-t border-border surface-subtle">
+        <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Beyond Outreach Alone</span>
+            <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
+              Operational systems
+              <em className="italic font-normal"> around sales momentum.</em>
+            </h2>
+          </div>
+          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Velocity often supports builder leadership teams with the
+              operational systems surrounding sales momentum, including
+              reporting visibility, workflow refinement, sales and marketing
+              alignment, event cadence planning, and appointment process
+              structure.
+            </p>
+            <p>
+              Because we operate directly inside live builder databases and
+              active communities, our advisory work is grounded in real buyer
+              behavior, real broker feedback, and real sales friction
+              happening in the field.
+            </p>
+            <p className="text-foreground">
+              This gives leadership teams clearer visibility into what's
+              actually happening between marketing, sales, and the
+              appointment pipeline.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* WHY VELOCITY */}
       <section className="container-x py-28 md:py-36">
         <div className="grid md:grid-cols-12 gap-12">
