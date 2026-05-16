@@ -236,10 +236,10 @@ export function DashboardTile({ className = "" }: { className?: string }) {
       <rect x="0.5" y="0.5" width="599" height="359" strokeOpacity="0.15" />
       {/* Top row, KPI cells */}
       {[
-        { x: 20, label: "CALLS / WK", v: "3,124" },
-        { x: 165, label: "CONVOS", v: "612" },
-        { x: 310, label: "BOOKED", v: "184" },
-        { x: 455, label: "ATTEND %", v: "60" },
+        { x: 20, label: "ENGAGEMENTS / WK", v: "3,124" },
+        { x: 165, label: "CONVERSATIONS", v: "612" },
+        { x: 310, label: "APPOINTMENTS", v: "184" },
+        { x: 455, label: "ATTENDANCE", v: "60" },
       ].map((k) => (
         <g key={k.label}>
           <rect x={k.x} y="20" width="125" height="78" strokeOpacity="0.25" />
