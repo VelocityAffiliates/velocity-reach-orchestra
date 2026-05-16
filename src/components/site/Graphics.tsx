@@ -232,8 +232,8 @@ export function GapDiagram({ className = "" }: { className?: string }) {
 
 export function DashboardTile({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 600 140" className={className} fill="none" stroke="currentColor" aria-hidden>
-      <rect x="0.5" y="0.5" width="599" height="139" strokeOpacity="0.15" />
+    <svg viewBox="0 0 600 360" className={className} fill="none" stroke="currentColor" aria-hidden>
+      <rect x="0.5" y="0.5" width="599" height="359" strokeOpacity="0.15" />
       {/* Top row, KPI cells */}
       {[
         { x: 30, label: "OUTREACH ACTIVITY", v: "3,124" },
@@ -250,12 +250,14 @@ export function DashboardTile({ className = "" }: { className?: string }) {
           </text>
         </g>
       ))}
-      <text x="20" y="126" fontSize="8" letterSpacing="3" fill="currentColor" stroke="none" opacity="0.55">
-        FIG. 06, LEADERSHIP DASHBOARD
-      </text>
-    </svg>
-  );
-}
+      {/* Chart area */}
+      <rect x="20" y="120" width="395" height="220" strokeOpacity="0.2" />
+      <line x1="20" y1="300" x2="415" y2="300" strokeOpacity="0.3" />
+      <polyline
+        points="40,280 80,250 120,260 160,220 200,200 240,210 280,170 320,160 360,140 400,130"
+        strokeOpacity="0.85"
+      />
+
 
 export function VerticalRule({ className = "" }: { className?: string }) {
   return (
