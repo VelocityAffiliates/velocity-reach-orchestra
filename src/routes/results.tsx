@@ -128,10 +128,10 @@ function ResultsPage() {
         <div className="container-x py-24 md:py-32">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Operational Output</span>
-            <h2 className="mt-6 text-4xl md:text-5xl">Measured at scale.</h2>
+            <h2 className="mt-6 text-4xl md:text-5xl">Operational momentum, measured weekly.</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-14 border-t border-border pt-14">
-            <Counter to={100000} suffix="+" label="Live Outreach Calls Annually" />
+            <Counter to={100000} suffix="+" label="Human-Led Outreach Interactions Annually" />
             <Counter to={10000} suffix="+" label="Event RSVPs Coordinated" />
             <Counter to={3000} suffix="+" label="Appointments Coordinated" />
             <Counter to={98} suffix="%" label="CRM-Logged Activity" />
