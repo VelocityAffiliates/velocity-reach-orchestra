@@ -68,7 +68,42 @@ function About() {
             </p>
             <p className="text-foreground text-2xl font-display leading-snug">
               Builders were generating leads, but no one truly owned outbound
-              execution at scale.
+              follow-through at scale.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDER PERSPECTIVE */}
+      <section className="border-b border-border">
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Founder Perspective</span>
+            <h2 className="mt-6 text-3xl md:text-4xl leading-tight">
+              The gap that built Velocity.
+            </h2>
+          </div>
+          <div className="md:col-span-8 space-y-5 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              After more than two decades inside builder sales environments,
+              Brooke Scott saw the same operational gap repeatedly:
+            </p>
+            <ul className="space-y-2 text-foreground">
+              <li>Marketing generated leads.</li>
+              <li>Sales teams focused on active buyers.</li>
+              <li>But nobody consistently owned outbound follow-through at scale.</li>
+            </ul>
+            <p>
+              Velocity was built to solve that specific problem, creating
+              disciplined engagement systems that keep databases active,
+              brokers connected, and leadership informed across active
+              portfolios.
+            </p>
+            <p>
+              Today, Velocity supports builders and developers across North
+              America through a combination of structured outreach,
+              appointment coordination, operational visibility, and embedded
+              advisory support.
             </p>
           </div>
         </div>
