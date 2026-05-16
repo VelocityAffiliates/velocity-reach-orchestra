@@ -260,6 +260,44 @@ function Home() {
         </div>
       </section>
 
+      {/* TRUSTED ACROSS PORTFOLIOS */}
+      <section className="border-b border-border">
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-5">
+            <span className="eyebrow">Trusted Across Active Builder Portfolios</span>
+            <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
+              Inside live builder portfolios
+              <em className="italic font-normal"> across North America.</em>
+            </h2>
+          </div>
+          <div className="md:col-span-7 space-y-8 md:pt-2">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Supporting master-planned communities, concrete towers, townhome
+              releases, standing inventory programs, and multi-phase
+              developments across North America.
+            </p>
+            <div>
+              <div className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
+                Active Across
+              </div>
+              <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-px bg-border hairline">
+                {[
+                  "British Columbia",
+                  "Alberta",
+                  "Ontario",
+                  "California",
+                  "Pacific Northwest U.S.",
+                ].map((m) => (
+                  <li key={m} className="bg-background p-5 text-sm">
+                    {m}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* HOW IT WORKS */}
       <section className="container-x py-28 md:py-36">
         <div className="max-w-2xl">
@@ -348,6 +386,39 @@ function Home() {
           </blockquote>
           <div className="mt-12 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
             Cathy Grant, VP of Sales
+          </div>
+        </div>
+      </section>
+
+      {/* BEYOND OUTREACH ALONE */}
+      <section className="border-t border-border surface-subtle">
+        <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="eyebrow">Beyond Outreach Alone</span>
+            <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
+              Operational systems
+              <em className="italic font-normal"> around sales momentum.</em>
+            </h2>
+          </div>
+          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Velocity often supports builder leadership teams with the
+              operational systems surrounding sales momentum, including
+              reporting visibility, workflow refinement, sales and marketing
+              alignment, event cadence planning, and appointment process
+              structure.
+            </p>
+            <p>
+              Because we operate directly inside live builder databases and
+              active communities, our advisory work is grounded in real buyer
+              behavior, real broker feedback, and real sales friction
+              happening in the field.
+            </p>
+            <p className="text-foreground">
+              This gives leadership teams clearer visibility into what's
+              actually happening between marketing, sales, and the
+              appointment pipeline.
+            </p>
           </div>
         </div>
       </section>
