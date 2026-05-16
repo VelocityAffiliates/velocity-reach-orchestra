@@ -234,27 +234,27 @@ function Home() {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-14 border-t border-white/15 pt-14">
             <div>
               <div className="font-display text-5xl md:text-6xl tabular-nums">100,000+</div>
-              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Outbound Calls Annually</div>
+              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Human-Led Outreach Interactions Annually</div>
             </div>
             <div>
               <div className="font-display text-4xl md:text-5xl">Human-Led</div>
-              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Outreach at Builder Scale</div>
+              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Builder Engagement Systems</div>
             </div>
             <div>
-              <div className="font-display text-4xl md:text-5xl tabular-nums">North America</div>
-              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Builder Coverage</div>
+              <div className="font-display text-4xl md:text-5xl">Multi-Market</div>
+              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Active Builder Portfolio Support</div>
             </div>
             <div>
               <div className="font-display text-5xl md:text-6xl tabular-nums">100%</div>
-              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Human Callers · Never Bots</div>
+              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Human Conversations · Never Bots</div>
             </div>
             <div>
-              <div className="font-display text-5xl md:text-6xl tabular-nums">CRM</div>
-              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Integrated Visibility</div>
+              <div className="font-display text-4xl md:text-5xl">CRM-Integrated</div>
+              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Visibility & Workflow Alignment</div>
             </div>
             <div>
-              <div className="font-display text-5xl md:text-6xl tabular-nums">Portfolio</div>
-              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Level Campaign Support</div>
+              <div className="font-display text-4xl md:text-5xl">Portfolio-Level</div>
+              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Engagement Infrastructure</div>
             </div>
           </div>
         </div>
