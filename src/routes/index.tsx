@@ -237,8 +237,8 @@ function Home() {
               <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Outbound Calls Annually</div>
             </div>
             <div>
-              <div className="font-display text-5xl md:text-6xl tabular-nums">3,000+</div>
-              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Calls / Week Capacity</div>
+              <div className="font-display text-4xl md:text-5xl">Human-Led</div>
+              <div className="mt-4 text-[11px] tracking-[0.28em] uppercase text-white/55">Outreach at Builder Scale</div>
             </div>
             <div>
               <div className="font-display text-4xl md:text-5xl tabular-nums">North America</div>
