@@ -243,7 +243,7 @@ export function DashboardTile({ className = "" }: { className?: string }) {
       ].map((k) => (
         <g key={k.label}>
           <rect x={k.x} y="20" width="125" height="78" strokeOpacity="0.25" />
-          <text x={k.x + 12} y="44" fontSize="8" letterSpacing="2.5" fill="currentColor" stroke="none" opacity="0.6">
+          <text x={k.x + 12} y="44" fontSize="7.5" letterSpacing="2" fill="currentColor" stroke="none" opacity="0.6">
             {k.label}
           </text>
           <text x={k.x + 12} y="82" fontSize="26" fontFamily="Playfair Display, serif" fill="currentColor" stroke="none">
