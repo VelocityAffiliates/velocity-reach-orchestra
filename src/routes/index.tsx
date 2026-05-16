@@ -266,30 +266,42 @@ function Home() {
           <div className="md:col-span-5">
             <span className="eyebrow">Trusted Across Active Builder Portfolios</span>
             <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
-              Inside live builder portfolios
+              Embedded inside active builder operations
               <em className="italic font-normal"> across North America.</em>
             </h2>
           </div>
           <div className="md:col-span-7 space-y-8 md:pt-2">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Supporting master-planned communities, concrete towers, townhome
-              releases, standing inventory programs, and multi-phase
-              developments across North America.
+              Velocity supports builders and developers across master-planned
+              communities, concrete towers, townhome releases, standing
+              inventory programs, and multi-phase portfolios, operating
+              directly inside the systems, workflows, and release cadence
+              that drive absorption.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Because our work sits between marketing, sales, brokers, and
+              buyers, leadership gains clearer visibility into momentum
+              across active communities.
             </p>
             <div>
               <div className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
-                Active Across
+                Active Markets
               </div>
-              <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-px bg-border hairline">
+              <ul className="mt-6 grid sm:grid-cols-2 gap-px bg-border hairline">
                 {[
-                  "British Columbia",
-                  "Alberta",
-                  "Ontario",
-                  "California",
-                  "Pacific Northwest U.S.",
-                ].map((m) => (
-                  <li key={m} className="bg-background p-5 text-sm">
-                    {m}
+                  ["British Columbia", "Multi-Community Builder Support"],
+                  ["Alberta", "Sales Momentum Infrastructure"],
+                  ["Ontario", "Active Release Coordination"],
+                  ["California", "Broker & Buyer Engagement Systems"],
+                  ["Pacific Northwest U.S.", "Portfolio-Level Operational Support"],
+                ].map(([m, d]) => (
+                  <li key={m} className="bg-background p-6">
+                    <div className="text-[11px] uppercase tracking-[0.24em]">
+                      {m}
+                    </div>
+                    <div className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                      {d}
+                    </div>
                   </li>
                 ))}
               </ul>
