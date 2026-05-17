@@ -6,6 +6,13 @@ import neighborhoodAerial from "@/assets/neighborhood-aerial.jpg";
 import neighborhoodStreet from "@/assets/neighborhood-street.jpg";
 import homeDetail from "@/assets/home-detail.jpg";
 import portfolioCoverageGraphic from "@/assets/portfolio-coverage-graphic.jpg";
+import disciplineStrategy from "@/assets/discipline-strategy.jpg";
+import disciplineOutreach from "@/assets/discipline-outreach.jpg";
+import disciplineDatabase from "@/assets/discipline-database.jpg";
+import disciplineEvents from "@/assets/discipline-events.jpg";
+import disciplineAppointments from "@/assets/discipline-appointments.jpg";
+import disciplineReporting from "@/assets/discipline-reporting.jpg";
+import platformSkyline from "@/assets/platform-skyline.jpg";
 import {
   GridPattern,
   OrbitMark,
@@ -156,6 +163,68 @@ function Home() {
               <p className="mt-4 text-muted-foreground leading-relaxed">{s.d}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* DISCIPLINES — image grid with serif overlays */}
+      <section className="border-t border-border">
+        <div className="container-x py-24 md:py-32">
+          <div className="max-w-2xl mb-14">
+            <span className="eyebrow">The Disciplines</span>
+            <h2 className="mt-6 text-4xl md:text-5xl leading-[1.05]">
+              An execution layer across the
+              <em className="italic font-normal"> entire sales lifecycle.</em>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              { src: disciplineStrategy, t: "Strategy" },
+              { src: disciplineOutreach, t: "Realtor Outreach" },
+              { src: disciplineDatabase, t: "Database Reactivation" },
+              { src: disciplineEvents, t: "Event Acceleration" },
+              { src: disciplineAppointments, t: "Appointments" },
+              { src: disciplineReporting, t: "Reporting" },
+            ].map((d) => (
+              <figure key={d.t} className="group relative overflow-hidden bg-ink">
+                <img
+                  src={d.src}
+                  alt={d.t}
+                  width={1280}
+                  height={896}
+                  loading="lazy"
+                  className="w-full h-[34vh] md:h-[40vh] object-cover opacity-80 grayscale transition duration-700 group-hover:opacity-90 group-hover:scale-[1.02]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
+                <figcaption className="absolute inset-0 flex items-center justify-center px-6">
+                  <span className="font-display text-white text-3xl md:text-4xl text-center drop-shadow-lg">
+                    {d.t}
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PLATFORM BANNER — skyline with serif overlay */}
+      <section className="relative overflow-hidden border-y border-border bg-ink">
+        <img
+          src={platformSkyline}
+          alt="Looking up at downtown skyscrapers, monochrome"
+          width={1920}
+          height={1024}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover opacity-55 grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+        <div className="relative container-x py-32 md:py-48 text-center">
+          <h2 className="font-display text-white text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-4xl mx-auto">
+            A comprehensive platform
+            <em className="italic font-normal"> of possibilities.</em>
+          </h2>
+          <p className="mt-8 text-[11px] md:text-xs uppercase tracking-[0.32em] text-white/75">
+            The right eyes on your project. Our eyes fixed forward.
+          </p>
         </div>
       </section>
 
