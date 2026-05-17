@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/services", label: "Services" },
@@ -28,12 +29,15 @@ export function Nav() {
     >
       <div className="container-x">
         <div className="flex items-center justify-between md:justify-center pt-6 pb-4 md:pt-7 md:pb-5 relative">
-          <Link to="/" className="flex flex-col items-center leading-none">
-            <span className="font-display text-2xl md:text-[28px] tracking-[0.02em]">
-              Velocity
-            </span>
-            <span className="mt-1 text-[10px] tracking-[0.42em] text-muted-foreground uppercase">
-              Affiliates
+          <Link to="/" className="flex items-center gap-3 leading-none">
+            <img src={logo} alt="Velocity Affiliates" className="h-12 w-12 md:h-14 md:w-14 object-contain" />
+            <span className="flex flex-col items-start">
+              <span className="font-display text-2xl md:text-[28px] tracking-[0.02em]">
+                Velocity
+              </span>
+              <span className="mt-1 text-[10px] tracking-[0.42em] text-muted-foreground uppercase">
+                Affiliates
+              </span>
             </span>
           </Link>
           <a
