@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Counter } from "@/components/site/Counter";
+import pageExecution from "@/assets/page-execution.jpg";
 
 export const Route = createFileRoute("/results")({
   component: ResultsPage,
@@ -76,6 +77,20 @@ function ResultsPage() {
           Structured outreach, appointment coordination, and operational support
           across active builder and developer portfolios.
         </p>
+      </section>
+
+      {/* IMAGE BANNER */}
+      <section className="container-x pb-20 md:pb-28">
+        <figure className="relative overflow-hidden">
+          <img
+            src={pageExecution}
+            alt="Warm sunlight pouring into a modern new-home sales gallery"
+            width={1920}
+            height={1024}
+            loading="lazy"
+            className="w-full h-[44vh] md:h-[64vh] object-cover"
+          />
+        </figure>
       </section>
 
       {/* HEADLINE METRIC + POSITIONING */}
