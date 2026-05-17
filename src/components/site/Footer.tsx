@@ -1,16 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Instagram } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
     <footer className="border-t border-border mt-32 bg-background">
       <div className="container-x pt-20 pb-12 grid gap-14 md:grid-cols-12">
         <div className="md:col-span-5">
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-3xl tracking-[0.01em]">Velocity</span>
-            <span className="mt-1 text-[10px] tracking-[0.42em] text-muted-foreground uppercase">
-              Affiliates
-            </span>
+          <div className="flex items-center gap-4 leading-none">
+            <img src={logo} alt="Velocity Affiliates" className="h-16 w-16 object-contain" />
+            <div className="flex flex-col">
+              <span className="font-display text-3xl tracking-[0.01em]">Velocity</span>
+              <span className="mt-1 text-[10px] tracking-[0.42em] text-muted-foreground uppercase">
+                Affiliates
+              </span>
+            </div>
           </div>
           <p className="mt-8 max-w-md text-sm text-muted-foreground leading-relaxed">
             Outbound sales execution and momentum infrastructure for homebuilders
