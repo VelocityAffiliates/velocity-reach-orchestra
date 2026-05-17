@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
-import { SystemDiagram, MapPlot } from "@/components/site/Graphics";
+import { SystemDiagram } from "@/components/site/Graphics";
+import servicesPortfolio from "@/assets/services-portfolio.jpg";
 
 export const Route = createFileRoute("/services")({
   component: Services,
@@ -168,9 +169,16 @@ function Services() {
             </h2>
             <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Start a Conversation</a>
           </div>
-          <div className="mt-16 md:mt-20 border-t border-border pt-12 md:pt-16">
-            <MapPlot className="w-full max-w-5xl mx-auto h-auto text-ink" />
-          </div>
+          <figure className="mt-16 md:mt-20 border-t border-border pt-12 md:pt-16">
+            <img
+              src={servicesPortfolio}
+              alt="Aerial twilight view of a master-planned residential community"
+              loading="lazy"
+              width={1920}
+              height={1080}
+              className="w-full h-[44vh] md:h-[60vh] object-cover"
+            />
+          </figure>
         </div>
       </section>
       <Footer />
