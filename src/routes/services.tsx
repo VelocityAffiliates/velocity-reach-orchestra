@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
-import { SystemDiagram } from "@/components/site/Graphics";
+import { SystemDiagram, MapPlot } from "@/components/site/Graphics";
 
 export const Route = createFileRoute("/services")({
   component: Services,
@@ -161,11 +161,16 @@ function Services() {
       </section>
 
       <section className="border-t border-border">
-        <div className="container-x py-24 md:py-32 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <h2 className="text-3xl md:text-5xl max-w-2xl">
-            A single execution system across your portfolio.
-          </h2>
-          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Start a Conversation</a>
+        <div className="container-x py-24 md:py-32">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <h2 className="text-3xl md:text-5xl max-w-2xl">
+              A single execution system across your portfolio.
+            </h2>
+            <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Start a Conversation</a>
+          </div>
+          <div className="mt-16 md:mt-20 border-t border-border pt-12 md:pt-16">
+            <MapPlot className="w-full max-w-5xl mx-auto h-auto text-ink" />
+          </div>
         </div>
       </section>
       <Footer />
