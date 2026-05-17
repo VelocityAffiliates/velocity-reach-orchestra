@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { DashboardTile, StackedBars } from "@/components/site/Graphics";
+import pageReporting from "@/assets/page-reporting.jpg";
 
 export const Route = createFileRoute("/reporting")({
   component: ReportingPage,
@@ -43,6 +44,20 @@ function ReportingPage() {
           builder leadership a single, consistent view into what's happening between
           marketing, sales, and the buyer.
         </p>
+      </section>
+
+      {/* IMAGE BANNER */}
+      <section className="container-x pb-20 md:pb-28">
+        <figure className="relative overflow-hidden">
+          <img
+            src={pageReporting}
+            alt="A laptop showing soft analytics in warm morning light"
+            width={1920}
+            height={1024}
+            loading="lazy"
+            className="w-full h-[44vh] md:h-[64vh] object-cover"
+          />
+        </figure>
       </section>
 
       {/* DASHBOARD */}

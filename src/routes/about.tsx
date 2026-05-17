@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { OrbitMark } from "@/components/site/Graphics";
+import pageCompany from "@/assets/page-company.jpg";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -47,6 +48,20 @@ function About() {
         <div className="md:col-span-3 flex md:justify-end">
           <OrbitMark className="w-40 h-40 text-ink" />
         </div>
+      </section>
+
+      {/* IMAGE BANNER */}
+      <section className="container-x pb-20 md:pb-28">
+        <figure className="relative overflow-hidden">
+          <img
+            src={pageCompany}
+            alt="Modern collaborative office in warm sunlight"
+            width={1920}
+            height={1024}
+            loading="lazy"
+            className="w-full h-[44vh] md:h-[64vh] object-cover"
+          />
+        </figure>
       </section>
 
       {/* OUR STORY */}

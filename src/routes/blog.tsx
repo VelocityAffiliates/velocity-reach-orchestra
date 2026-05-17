@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { articles, featuredSlug, getArticle } from "@/lib/articles";
+import pageInsights from "@/assets/page-insights.jpg";
 
 export const Route = createFileRoute("/blog")({
   component: BlogPage,
@@ -45,6 +46,20 @@ function BlogPage() {
           engagement, event traffic, CRM follow-through, and the systems that
           turn pipeline into pace.
         </p>
+      </section>
+
+      {/* IMAGE BANNER */}
+      <section className="container-x pb-16 md:pb-24">
+        <figure className="relative overflow-hidden">
+          <img
+            src={pageInsights}
+            alt="Open magazine and coffee in warm afternoon light"
+            width={1920}
+            height={1024}
+            loading="lazy"
+            className="w-full h-[40vh] md:h-[58vh] object-cover"
+          />
+        </figure>
       </section>
 
       {/* CATEGORY BAR */}
