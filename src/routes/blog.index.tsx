@@ -73,6 +73,7 @@ function BlogPage() {
         <Link
           to="/blog/$slug"
           params={{ slug: featured.slug }}
+          reloadDocument
           className="grid md:grid-cols-12 gap-10 group"
         >
           <div className="md:col-span-7">
@@ -107,6 +108,7 @@ function BlogPage() {
               key={p.slug}
               to="/blog/$slug"
               params={{ slug: p.slug }}
+              reloadDocument
               className={`grid md:grid-cols-12 gap-10 py-12 md:py-14 group ${
                 i > 0 ? "border-t border-border" : ""
               }`}

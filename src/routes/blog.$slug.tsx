@@ -77,6 +77,7 @@ function ArticlePage() {
                 key={p.slug}
                 to="/blog/$slug"
                 params={{ slug: p.slug }}
+                reloadDocument
                 className="bg-background p-8 group"
               >
                 <span className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
