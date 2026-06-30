@@ -86,7 +86,10 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  /* No global smooth scroll: it animates router scroll-restoration and makes
+     page-to-page navigation look like the previous page is just scrolling up
+     before the new route renders. Use scrollIntoView({behavior:'smooth'}) on
+     specific in-page anchors if needed. */
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
