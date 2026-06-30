@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Counter } from "@/components/site/Counter";
@@ -55,11 +55,57 @@ const cases = [
   },
 ];
 
-const positioning = [
-  { t: "Human-Led Outreach", d: "Live conversations conducted by trained operators, never automated dialers." },
-  { t: "CRM-Integrated Execution", d: "Activity, dispositions, and appointments logged inside your existing system of record." },
-  { t: "Portfolio-Level Support", d: "Operating across multiple communities and release calendars in parallel." },
-  { t: "Leadership Visibility", d: "Weekly executive reporting that reflects real activity and pipeline movement." },
+const disciplines = [
+  {
+    n: "01",
+    title: "Realtor Outreach",
+    problem: "Most Realtors in your market haven't heard from your communities in months.",
+    bullets: [
+      "Active broker engagement across your markets",
+      "Urgency creation around new releases and incentives",
+      "Realtor sentiment and objection reporting",
+      "Appointment and tour coordination",
+    ],
+  },
+  {
+    n: "02",
+    title: "Database Reactivation",
+    problem: "Your CRM has warm leads in it right now. Most of them are going cold.",
+    bullets: [
+      "Human-first outreach to dormant prospects",
+      "Buying momentum identification",
+      "Re-engagement cadences tied to your release calendar",
+      "CRM-logged activity and outcome tracking",
+    ],
+  },
+  {
+    n: "03",
+    title: "Event Acceleration",
+    problem: "Most builders measure event success by attendance. The real number is conversion.",
+    bullets: [
+      "Pre-event invitation and RSVP campaigns",
+      "Confirmation and reminder cadences",
+      "Day-of attendance tracking and engagement",
+      "Post-event follow-up within 72 hours",
+    ],
+  },
+  {
+    n: "04",
+    title: "Appointment Coordination",
+    problem: "A booked appointment means nothing if it doesn't show up in the CRM with a next step attached.",
+    bullets: [
+      "Confirmed, CRM-logged appointment delivery",
+      "Seamless sales team handoff",
+      "No-show recovery outreach",
+      "Appointment-to-walk-in tracking",
+    ],
+  },
+];
+
+const stats = [
+  { t: "Multi-Market", d: "Active builder portfolio support" },
+  { t: "100% Human", d: "Conversations — never bots" },
+  { t: "CRM-Integrated", d: "Visibility and workflow alignment" },
 ];
 
 function ResultsPage() {
@@ -74,8 +120,9 @@ function ResultsPage() {
           <em className="italic font-normal"> across active portfolios.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Structured outreach, appointment coordination, and operational support
-          across active builder and developer portfolios.
+          Velocity runs the outbound layer your sales team doesn't have capacity
+          for. Four disciplines, executed daily, reported weekly, accountable to
+          outcomes.
         </p>
       </section>
 
@@ -93,18 +140,47 @@ function ResultsPage() {
         </figure>
       </section>
 
-      {/* HEADLINE METRIC + POSITIONING */}
+      {/* FOUR DISCIPLINES */}
+      <section className="border-t border-border">
+        <div className="container-x py-24 md:py-32">
+          <span className="eyebrow">What We Run</span>
+          <div className="mt-12 grid md:grid-cols-4 gap-10 gap-y-12">
+            {disciplines.map((d) => (
+              <div key={d.n} className="border-t border-border pt-8">
+                <div className="font-display text-muted-foreground text-xl">{d.n}</div>
+                <h3 className="mt-6 text-2xl">{d.title}</h3>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                  {d.problem}
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  {d.bullets.map((b) => (
+                    <li key={b} className="pl-4 -indent-4">
+                      — {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATS BLOCK */}
       <section className="border-y border-border bg-ink text-white">
         <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-x-10 gap-y-14 items-start">
           <div className="md:col-span-4">
-            <div className="font-display text-6xl md:text-7xl text-white tabular-nums leading-none">100,000+</div>
-            <div className="mt-5 text-[11px] tracking-[0.28em] uppercase text-white/55">Live Outreach Calls Annually</div>
+            <div className="font-display text-6xl md:text-7xl text-white tabular-nums leading-none">
+              100,000+
+            </div>
+            <div className="mt-5 text-[11px] tracking-[0.28em] uppercase text-white/55">
+              Human-led outreach interactions annually
+            </div>
           </div>
-          <div className="md:col-span-8 grid sm:grid-cols-2 gap-px bg-white/15">
-            {positioning.map((p) => (
-              <div key={p.t} className="bg-ink p-7">
-                <h3 className="text-lg text-white">{p.t}</h3>
-                <p className="mt-3 text-sm text-white/65 leading-relaxed">{p.d}</p>
+          <div className="md:col-span-8 grid sm:grid-cols-3 gap-px bg-white/15">
+            {stats.map((s) => (
+              <div key={s.t} className="bg-ink p-7">
+                <h3 className="text-lg text-white">{s.t}</h3>
+                <p className="mt-3 text-sm text-white/65 leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>
@@ -138,12 +214,16 @@ function ResultsPage() {
         </div>
       </section>
 
-      {/* SECONDARY METRICS */}
+      {/* OPERATIONAL MOMENTUM */}
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Operational Output</span>
-            <h2 className="mt-6 text-4xl md:text-5xl">Operational momentum, measured weekly.</h2>
+            <h2 className="mt-6 text-4xl md:text-5xl">
+              Operational momentum,
+              <br />
+              measured weekly.
+            </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-14 border-t border-border pt-14">
             <Counter to={100000} suffix="+" label="Human-Led Outreach Interactions Annually" />
@@ -154,41 +234,47 @@ function ResultsPage() {
         </div>
       </section>
 
-      {/* OPERATIONAL INTEGRATION */}
+      {/* INFRASTRUCTURE */}
       <section className="border-t border-border surface-subtle">
         <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <span className="eyebrow">Operational Integration</span>
-            <h2 className="mt-6 text-3xl md:text-4xl leading-tight">
-              Beyond outbound execution alone.
+            <h2 className="text-3xl md:text-4xl leading-tight">
+              This is not a campaign.
+              <br />
+              It's infrastructure.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p className="text-foreground font-display text-2xl md:text-3xl leading-snug">
-              Velocity supports more than outbound execution alone.
+            <p>
+              Velocity doesn't run one-off pushes. We embed inside your operation
+              — aligned to your release calendar, your CRM, and your sales team's
+              rhythm — and we run outbound execution continuously, across your
+              full portfolio.
             </p>
             <p>
-              Across active builder portfolios, our role often extends into
-              CRM workflow refinement, reporting visibility, appointment
-              coordination systems, sales and marketing alignment, and
-              operational support for leadership teams managing multiple
-              communities simultaneously.
-            </p>
-            <p>
-              The objective is to create clearer execution, stronger
-              visibility, and more consistent operational rhythm across
-              the portfolio.
+              Every week, leadership sees exactly what was contacted, what
+              responded, what was booked, and what needs a next step.
             </p>
           </div>
         </div>
       </section>
 
+      {/* CLOSING CTA */}
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32 flex flex-wrap items-end justify-between gap-6">
           <h2 className="text-4xl md:text-5xl max-w-2xl">
-            Looking for this kind of execution inside your portfolio?
+            Looking for this kind of execution
+            <br />
+            inside your portfolio?
           </h2>
-          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Call</a>
+          <a
+            href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Book a Strategy Call
+          </a>
         </div>
       </section>
 
