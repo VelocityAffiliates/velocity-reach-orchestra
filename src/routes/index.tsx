@@ -62,18 +62,19 @@ function Home() {
           <div className="text-center max-w-4xl mx-auto animate-fade-in">
             <span className="eyebrow justify-center">Outbound Execution · Built for Homebuilders</span>
             <h1 className="mt-8 display-xl text-5xl md:text-7xl lg:text-[88px]">
-              Outbound Sales Execution
-              <em className="italic font-normal"> for Homebuilders.</em>
+              Your database has warm leads in it right now.
+              <em className="italic font-normal"> Most of them haven't heard from anyone in months.</em>
             </h1>
             <p className="mt-8 max-w-2xl mx-auto text-lg text-muted-foreground leading-relaxed">
-              Velocity Affiliates turns broker databases, prospect leads, and event
-              traffic into booked appointments, measurable engagement, and consistent
-              sales momentum.
+              Velocity runs the outbound layer your sales team doesn't have capacity for — consistent follow-up, Realtor engagement, event acceleration, and appointment coordination, executed as a system across your portfolio.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Strategy Call</a>
               <Link to="/services" className="btn-outline">See How We Work</Link>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground text-center">
+              Supporting builder portfolios across Canada and the United States.
+            </p>
           </div>
 
           <div className="mt-20 md:mt-28 relative overflow-hidden">
