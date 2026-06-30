@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { DashboardTile, StackedBars } from "@/components/site/Graphics";
@@ -17,15 +17,15 @@ export const Route = createFileRoute("/reporting")({
 });
 
 const streams = [
-  { t: "Weekly Reporting", d: "A single executive-level summary of outbound activity, conversations, and appointments." },
-  { t: "Engagement Themes", d: "What buyers and brokers are actually saying, surfaced from live conversations." },
-  { t: "Objection Tracking", d: "Recurring resistance points across pricing, product, financing, and timing." },
-  { t: "Appointment Flow", d: "Booking, confirmation, attendance, and disposition across every community." },
-  { t: "Realtor Sentiment", d: "Where brokers are leaning, what they're hearing, and how they're positioning your projects." },
-  { t: "Buyer Hesitation", d: "Patterns in market hesitation, read in real time, not in retrospect." },
-  { t: "Event Performance", d: "RSVP, confirmation, attendance, and post-event appointment conversion." },
-  { t: "Database Health", d: "Engagement coverage across active, aged, and dormant segments of your CRM." },
-  { t: "Operational Trends", d: "Portfolio-wide patterns that should inform marketing and release strategy." },
+  { t: "Weekly Reporting", d: "A single executive-level summary of outbound activity, conversations, and appointments — delivered every week without being asked for." },
+  { t: "Engagement Themes", d: "What buyers and brokers are actually responding to, in real time across your communities." },
+  { t: "Objection Tracking", d: "Recurring resistance patterns across pricing, product, financing, and timing — identified before they become a sales problem." },
+  { t: "Appointment Flow", d: "Booking volume, confirmation rates, attendance, and disposition tracking across every active community." },
+  { t: "Realtor Sentiment", d: "What brokers are saying, what they're hearing from buyers, and what's driving or stalling their engagement with your communities." },
+  { t: "Buyer Reactivation", d: "Who came back, what reactivated them, and what pipeline movement resulted from outbound effort." },
+  { t: "Event Performance", d: "RSVP, confirmation, attendance, and post-event appointment conversion — in one place." },
+  { t: "Database Health", d: "Coverage, engagement gaps, agent activity, and demand alignment across your CRM." },
+  { t: "Operational Trends", d: "Week-over-week patterns that inform marketing positioning, sales strategy, and release timing." },
 ];
 
 function ReportingPage() {
@@ -40,9 +40,9 @@ function ReportingPage() {
           <em className="italic font-normal"> without added complexity.</em>
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Velocity operates as a strategic intelligence and reporting partner, giving
-          builder leadership a single, consistent view into what's happening between
-          marketing, sales, and the buyer.
+          Every week, Velocity gives builder leadership a single, clear view into
+          what's happening between marketing, sales, and the buyer — across every
+          active community in the portfolio.
         </p>
       </section>
 
@@ -72,8 +72,7 @@ function ReportingPage() {
       {/* STREAMS */}
       <section className="container-x py-28 md:py-36">
         <div className="max-w-2xl mb-14">
-          <span className="eyebrow">What Leadership Sees</span>
-          <h2 className="mt-6 text-4xl md:text-5xl">Nine reporting streams. One operating view.</h2>
+          <h2 className="text-4xl md:text-5xl">Nine reporting streams. One operational view.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-border hairline">
           {streams.map((s, i) => (
@@ -88,21 +87,28 @@ function ReportingPage() {
         </div>
       </section>
 
-      {/* TONE BLOCK */}
+      {/* REPORTING STANDARD */}
       <section className="border-y border-border bg-ink text-white">
         <div className="container-x py-28 md:py-36 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <span className="eyebrow text-white/60">Operating Standard</span>
+            <span className="eyebrow text-white/60">Reporting Standard</span>
           </div>
           <div className="md:col-span-8">
-            <p className="font-display text-3xl md:text-5xl leading-[1.1] text-white">
+            <h2 className="font-display text-3xl md:text-5xl leading-[1.1] text-white">
               Reporting that reflects the work, not the marketing of the work.
-            </p>
-            <p className="mt-8 text-white/70 leading-relaxed text-lg max-w-2xl">
-              Built for VPs of Sales, ownership groups, and project leadership who
-              need a clear, weekly read on outbound momentum across every
-              community in the portfolio.
-            </p>
+            </h2>
+            <div className="mt-8 space-y-5 text-white/70 leading-relaxed text-lg max-w-2xl">
+              <p>
+                Built for VPs of Sales, ownership groups, and project leadership who
+                need a clear, weekly read on outbound momentum across every community
+                in the portfolio.
+              </p>
+              <p>
+                This is not a vanity report. It is an operational document — specific,
+                measurable, and accountable to outcomes your sales team can act on
+                immediately.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -112,16 +118,60 @@ function ReportingPage() {
         <div className="max-w-2xl mb-12">
           <span className="eyebrow">Throughput</span>
           <h2 className="mt-6 text-3xl md:text-4xl">Output measured, weekly.</h2>
+          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            Every week, leadership knows exactly what was contacted, what responded,
+            what was booked, and what needs a next step.
+          </p>
         </div>
         <StackedBars className="w-full h-auto text-ink" />
       </section>
 
+      {/* SAMPLE REPORT CTA */}
       <section className="border-t border-border">
-        <div className="container-x py-24 md:py-32 flex flex-wrap items-end justify-between gap-6">
-          <h2 className="text-4xl md:text-5xl max-w-2xl">
-            See the reporting we deliver to leadership teams.
-          </h2>
-          <a href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates" target="_blank" rel="noopener noreferrer" className="btn-primary">Request a Sample</a>
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-8">
+            <h2 className="text-4xl md:text-5xl max-w-2xl">
+              See exactly what lands in your leadership inbox.
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+              Request a sample report and we'll show you what weekly visibility looks
+              like across an active builder portfolio.
+            </p>
+          </div>
+          <div className="md:col-span-4 md:flex md:justify-end">
+            <a
+              href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Request a Sample Report
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CLOSING CTA */}
+      <section className="border-t border-border">
+        <div className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-8">
+            <h2 className="font-display text-4xl md:text-6xl leading-[1.05] max-w-3xl">
+              Want this level of visibility across your portfolio?
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+              We'll come back with a clear path to launch within two weeks.
+            </p>
+          </div>
+          <div className="md:col-span-4 md:flex md:justify-end">
+            <a
+              href="https://calendly.com/brooke-velocityaffiliates/introduction-to-velocity-affliates"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Book a Strategy Call
+            </a>
+          </div>
         </div>
       </section>
 
