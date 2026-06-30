@@ -55,6 +55,7 @@ function InsightsPage() {
         <Link
           to="/blog/$slug"
           params={{ slug: featured.slug }}
+          reloadDocument
           className="grid md:grid-cols-12 gap-10 group"
         >
           <div className="md:col-span-7">
@@ -92,6 +93,7 @@ function InsightsPage() {
                 key={p.slug}
                 to="/blog/$slug"
                 params={{ slug: p.slug }}
+                reloadDocument
                 className="group block"
               >
                 <div className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
