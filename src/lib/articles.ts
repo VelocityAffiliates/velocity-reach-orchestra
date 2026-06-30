@@ -138,7 +138,7 @@ export const articles: Article[] = [
       "But additional leads don't solve inconsistent follow-through.",
       "They simply create a larger database to neglect.",
       "Before investing in more demand generation, it's worth asking a different question:",
-      '"Are we fully engaging the opportunities we've already paid to acquire?"',
+      "\"Are we fully engaging the opportunities we've already paid to acquire?\"",
       "For many builders, the greatest opportunity isn't generating another thousand leads.",
       "It's reactivating the thousands they already have.",
       "Recovering Momentum",
