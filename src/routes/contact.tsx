@@ -29,6 +29,26 @@ function Contact() {
         </p>
       </section>
 
+      {/* SOCIAL PROOF BLOCK */}
+      <section className="border-t border-border surface-subtle">
+        <div className="container-x py-16 md:py-24 grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-8">
+            <blockquote className="font-display text-2xl md:text-3xl leading-snug">
+              "Velocity supports builder portfolios across master-planned communities,
+              concrete towers, townhome releases, and multi-phase developments — across
+              Canada and the United States."
+            </blockquote>
+          </div>
+          <div className="md:col-span-4 md:text-right">
+            <div className="text-4xl md:text-5xl font-display">100,000+</div>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              human-led outreach interactions annually.<br />
+              Supporting active builder portfolios across North America.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="border-t border-border">
         <div className="container-x py-20 md:py-28 grid md:grid-cols-12 gap-16">
           <div className="md:col-span-4 space-y-10">
@@ -59,10 +79,8 @@ function Contact() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <Field label="Name" name="name" required />
                   <Field label="Company" name="company" required />
-                  <Field label="Email" name="email" type="email" required />
-                  <Field label="Phone" name="phone" />
                 </div>
-                <Field label="Role" name="role" placeholder="VP Sales, Marketing Director, Owner…" />
+                <Field label="Email" name="email" type="email" required />
                 <div>
                   <label htmlFor="message" className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
                     What do you want Velocity to run?
@@ -76,7 +94,7 @@ function Contact() {
                   />
                 </div>
                 <div className="pt-4">
-                  <button type="submit" className="btn-primary">Send inquiry</button>
+                  <button type="submit" className="btn-primary">Start the conversation</button>
                 </div>
               </>
             )}
